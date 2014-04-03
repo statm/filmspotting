@@ -37,10 +37,15 @@ body {
 }
 
 #info-box {
-	background: #06C;
+	background: #FFF;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	width: 0;
 	position: absolute;
+}
+
+#search-box {
+	left: 200px;
+	right: 200px;
 }

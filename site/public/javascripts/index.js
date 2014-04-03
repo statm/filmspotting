@@ -33,7 +33,6 @@ function onSearchInput() {
 	}
 	
 	revealMap();
-	showInfoBox();
 }
 
 var mapRevealed = false;
@@ -41,8 +40,8 @@ var mapRevealed = false;
 function revealMap() {
 	mapRevealed = true;
 	var duration = 200;
-	$("#search-box").animate({top: 50}, duration);
-	$("#overlay").animate({opacity: 0}, duration).hide();
+	$("#search-box").animate({top: 50}, {duration : duration, queue : false});
+	$("#overlay").animate({opacity: 0}, {duration : duration, queue : false}).hide();
 	$({blurRadius: 7}).animate({blurRadius: 0}, {
         duration: duration,
         step: function() {
@@ -56,6 +55,14 @@ function revealMap() {
 
 function showInfoBox() {
 	var duration = 200;
-	$("#map-canvas").animate({left: 300}, duration);
-	$("#info-box").animate({width: 300}, duration);
+	$("#map-canvas").animate({left: 400}, {duration : duration, queue : false});
+	$("#info-box").animate({width: 400}, {duration : duration, queue : false});
+	$("#search-box").animate({"margin-left": 400, left: 80, right: 80}, {duration : duration, queue : false});
+}
+
+function hideInfoBox() {
+	var duration = 200;
+	$("#map-canvas").animate({left: 0}, {duration : duration, queue : false});
+	$("#info-box").animate({width: 0}, {duration : duration, queue : false});
+	$("#search-box").animate({"margin-left": 0, left: 200, right: 200}, {duration : duration, queue : false});
 }
