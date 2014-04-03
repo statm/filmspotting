@@ -1,4 +1,6 @@
 (function(document) {
+    "use strict";
+    
 	$(document).ready(function() {
 		initMap();
 		initUI();
@@ -30,7 +32,7 @@
 	function onSearchInput(event) {
 		if (!mapRevealed) {
 			revealMap();
-			showSearchSuggestion();
+			// showSearchSuggestion();
 		}
 		
 		if (event.keyCode == 13) { // Enter pressed
@@ -41,7 +43,7 @@
 	var mapRevealed = false;
 	
 	function revealMap() {
-		mapRevealed = true;
+        mapRevealed = true;
 		var duration = 200;
 		$("#search-box").animate({top: 40}, {duration : duration, queue : false});
 		$("#overlay").animate({opacity: 0}, {duration : duration, queue : false}).hide();
@@ -72,9 +74,11 @@
 	
 	function showSearchSuggestion() {
 		$("#search-suggestion").show();
+        $("#search-input").addClass("search-input-with-suggestion");
 	}
 	
 	function hideSearchSuggestion() {
 		$("#search-suggestion").hide();
+        $("#search-input").removeClass("search-input-with-suggestion");
 	}
 })(document);

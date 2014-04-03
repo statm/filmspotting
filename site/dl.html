@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        function sendreq() {  
+            var req = new XMLHttpRequest(); 
+            req.onprogress=updateProgress;
+            req.open('GET', 'data/imdb_data.json', true);  
+            req.onreadystatechange = function () {  
+                if (req.readyState == 4) 
+                {
+                }  
+            };  
+            req.send(); 
+        }
+        
+        function updateProgress(event) {
+            if (event.lengthComputable) {
+                document.writeln(event.loaded / event.total + "<br/>");
+            }
+        }
+        
+        sendreq();
+    </script>
+</body>
+</html>
