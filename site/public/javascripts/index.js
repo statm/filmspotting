@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	initMap();
 	initUI();
+//	revealMap();
 });
 
 function initMap() {
@@ -16,7 +17,6 @@ function initMap() {
 function initUI() {
 	onResize();
 	$(window).resize(onResize);
-	$("#search-button").click(onSearch);
 	$("#search-input").keypress(onSearchInput);
 }
 
@@ -33,10 +33,7 @@ function onSearchInput() {
 	}
 	
 	revealMap();
-}
-
-function onSearch() {
-	// TODO
+	showInfoBox();
 }
 
 var mapRevealed = false;
@@ -55,4 +52,10 @@ function revealMap() {
             });
         }
     });
+}
+
+function showInfoBox() {
+	var duration = 200;
+	$("#map-canvas").animate({left: 300}, duration);
+	$("#info-box").animate({width: 300}, duration);
 }
