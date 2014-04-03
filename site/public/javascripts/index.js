@@ -7,7 +7,8 @@ function initMap() {
 	var mapOptions = {
 		center : new google.maps.LatLng(37.09024, -95.712891),
 		zoom : 5,
-		noClear : true
+		noClear : true,
+		disableDefaultUI : true
 	};
 	var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 }
@@ -30,9 +31,8 @@ function onSearchInput() {
 	if (mapRevealed) {
 		return;
 	}
-	if ($("#search-input").val().length > 1) {
-		revealMap();
-	}
+	
+	revealMap();
 }
 
 function onSearch() {
