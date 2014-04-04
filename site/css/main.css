@@ -57,8 +57,7 @@ body {
 }
 
 #search-suggestion {
-	max-height: 700px;
-    overflow-y: auto;
+	height: 300px;
     padding: 8px 0;
     background-color: #FFF;
     
@@ -73,28 +72,4 @@ body {
     box-shadow: 0 3px 3px rgba(0,0,0,.2);
     
     display: none;
-}
-
-#search-suggestion li {
-    height: 90px;
-    cursor: pointer;
-}
-
-#search-suggestion li:hover {
-    background-color: #0097CF;
-    color: #FFF;
-}
-
-.suggestion-item {
-    height: 90px;
-}
-
-.suggestion-inline-helper {
-    display: inline-block;
-    height: 100%;
-    width: 10px;
-    vertical-align: middle;
-}
-
-.suggestion-item img {
 }
