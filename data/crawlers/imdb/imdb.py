@@ -1,9 +1,12 @@
-import json
-import urllib2
-from bs4 import BeautifulSoup
-import re
-from urllib2 import URLError
 import gc
+import json
+import os
+import re
+from urllib2 import URLError, urlopen, HTTPError
+import urllib2
+
+from bs4 import BeautifulSoup
+
 
 data = []
 
@@ -29,12 +32,26 @@ def get_top1000_list():
     print "top 1000 movie ids collected."
     return result
 
+def save_movie_img(movie_id, img_url):
+    try:
+        f = urlopen(img_url)
+        print "downloading " + img_url
+        with open(os.path.dirname(__file__) + "\\images\\" + movie_id + ".jpg", "wb") as local_file:
+            local_file.write(f.read())
+    except HTTPError, e:
+        print "HTTP Error: ", e.code, img_url
+    except URLError, e:
+        print "URL Error: ", e.reason, img_url
+
 def get_movie_info(movie_id):
     # basic info
     imdb_movie_url = "http://www.imdb.com/title/" + movie_id + "/"
     page = urllib2.urlopen(url=imdb_movie_url, timeout=10)
     soup = BeautifulSoup(page)
-      
+    
+    movie_img_url = soup.select(".image img")[0].attrs["src"].strip()
+    save_movie_img(movie_id, movie_img_url)
+    
     movie_name = soup.select(".header .itemprop")[0].contents[0].strip()
     movie_year = soup.select(".header .nobr a")[0].contents[0].strip()
     movie_rate = soup.select(".star-box-giga-star")[0].contents[0].strip()
@@ -80,6 +97,3 @@ if __name__ == '__main__':
     
     dump()
     print error_id
-    
-    
-#[u'tt0245429', u'tt0986264', u'tt0110357', u'tt0910970', u'tt0095327', u'tt0435761', u'tt0119698', u'tt1049413', u'tt0114709', u'tt0096283', u'tt0347149', u'tt0892769', u'tt0118843', u'tt0087544', u'tt0338564', u'tt0266543', u'tt0353969', u'tt1220719', u'tt0092067', u'tt0423866', u'tt0374546', u'tt0094625', u'tt0198781', u'tt1562872', u'tt0808417', u'tt0382932', u'tt0113568', u'tt0317705', u'tt0103639', u'tt0120363', u'tt2294629', u'tt0129167', u'tt0126029', u'tt1527788', u'tt0398286', u'tt0097814', u'tt1772341', u'tt0286244', u'tt0104652', u'tt1588170', u'tt0158983', u'tt0310775', u'tt0029583', u'tt0876563', u'tt0851578', u'tt1323594', u'tt0451094', u'tt1568921', u'tt1410063', u'tt0111512', u'tt0441773', u'tt1436045', u'tt0070608', u'tt0986233', u'tt0097757', u'tt1386932', u'tt0312004', u'tt0268380', u'tt0032910', u'tt1690953', u'tt1453405', u'tt0120762', u'tt0462538', u'tt0929632', u'tt0385700', u'tt0048280', u'tt0328832', u'tt0046183', u'tt1302011', u'tt0178868', u'tt0120917']
