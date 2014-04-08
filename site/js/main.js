@@ -28,8 +28,14 @@
 	function onSearchInput(event) {
 		if (!mapRevealed) {
 			revealMap();
+            setTimeout(onTypeAhead, 300);
+            return;
 		}
         
+        onTypeAhead();
+	}
+    
+    function onTypeAhead() {
         var inputText = $("#search-input").val();
         var suggestions = getSuggestion(inputText);
         if (suggestions.length > 0) {
@@ -37,13 +43,13 @@
         } else {
             hideSearchSuggestion();
         }
-	}
+    }
 
 	var mapRevealed = false;
 
 	function revealMap() {
         mapRevealed = true;
-		var duration = 200;
+		var duration = 300;
 		$("#search-box").animate({top: 40}, {duration : duration, queue : false});
 		$("#overlay").animate({opacity: 0}, {duration : duration, queue : false}).hide();
 		$({blurRadius: 7}).animate({blurRadius: 0}, {
@@ -61,7 +67,7 @@
 		var duration = 200;
 		$("#map-canvas").animate({left: 400}, {duration : duration, queue : false});
 		$("#info-box").animate({width: 400}, {duration : duration, queue : false});
-		$("#search-box").animate({"margin-left": 400, left: 80, right: 80}, {duration : duration, queue : false});
+		$("#search-box").animate({"margin-left": 400, left: 70, right: 70}, {duration : duration, queue : false});
         
         var infoBox = $("#info-box");
         infoBox.empty();
@@ -103,6 +109,7 @@
         $("#search-input").val(movieData.name);
         hideSearchSuggestion();
         showInfoBox(movieData);
+        clearMarkers();
         addMarkers(movieData.locations);
     }
     
@@ -142,6 +149,7 @@
     // ======================================
     
     var map;
+    var markers = [];
     
     function initMap() {
         var mapOptions = {
@@ -154,6 +162,10 @@
     }
     
     function clearMarkers() {
+        for (var i = 0; i < markers.length; i++) {
+            markers[i].setMap(null);
+        }
+        markers = [];
     }
     
     function addMarkers(locations) {
@@ -168,6 +180,7 @@
                               var marker = new google.maps.Marker({
                                   position: new google.maps.LatLng(location.lat, location.lng),
                                   map: map});
+                              markers.push(marker);
                           } else {
                               console.log("geocoding failed for address: " + address);
                           }

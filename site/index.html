@@ -29,8 +29,8 @@
         {{#data}}
             <li>
                 <div class="suggestion-item">
-                    <span class="suggestion-inline-helper"></span>
-                    <img src="images/imdb/{{id}}.jpg" width="45"/>
+                    <span class="suggestion-inline-helper"/>
+                    <img src="images/imdb/{{imdb_id}}.jpg" width="45"/>
                     <span>{{name}}</span><span> ({{year}})</span>
                 </div>
             </li>
@@ -38,19 +38,39 @@
     </script>
     
     <script id="info-box-tmpl" type="text/html">
-        <img src="images/imdb/{{id}}.jpg" width="150" id="movie-image"/>
-        <div id="movie-name-and-rate">{{name}}<br/>({{year}})</div>
-        
-        <ul id="movie-intro-box" class="nav nav-tabs nav-justified">
-            <li class="active"><a href="#">Movie Info</a></li>
-            <li><a href="#">Locations</a></li>
-        </ul>
-        
-        <div id="location-list">
-        {{#locations}}
-            <a href="#" class="list-group-item">{{movie_location}} -> {{actual_location}}</a>
-        {{/locations}}
+        <div id="movie-header">
+            <img src="images/imdb/{{imdb_id}}.jpg" id="movie-image"/>
+            <div id="movie-intro-box">
+                <span id="movie-name">{{name}}</span>
+                <span id="movie-year">({{year}})</span><br/>
+                <div id="movie-intro-content">{{desc}}</div>
+            </div>
         </div>
+        
+        <div>
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active"><a href="#movie-info-pane" data-toggle="tab">Movie Info</a></li>
+                <li><a href="#location-list-pane" data-toggle="tab">Locations</a></li>
+            </ul>
+            
+            <div class="tab-content">
+                <div id="movie-info-pane" class="tab-pane active">
+                    <p>IMDb Rate: <a href="http://www.imdb.com/title/{{imdb_id}}/ratings" target="_blank">{{rate}}</a></p>
+                    <p>Genres: {{genres}}</p>
+                </div>
+                
+                <div id="location-list-pane" class="tab-pane">
+                    <ul id="location-list">
+                    {{#locations}}
+                        <li>
+                            {{actual_location}}
+                        </li>
+                    {{/locations}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
     </script>
 </body>
 </html>

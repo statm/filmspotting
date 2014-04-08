@@ -31,23 +31,12 @@ body {
 	z-index: 11;
 }
 
+/* search box & suggestion menu */
+
 #search-box {
 	position: fixed;
 	z-index: 12;
-}
-
-#info-box {
-	background: #FFF;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	width: 0;
-	position: absolute;
-    overflow-y: hidden;
-}
-
-#search-box {
-	left: 200px;
+    left: 200px;
 	right: 200px;
 }
 
@@ -58,7 +47,7 @@ body {
 }
 
 #search-suggestion {
-	height: 300px;
+	max-height: 700px;
     padding: 8px 0;
     background-color: #FFF;
     
@@ -73,7 +62,7 @@ body {
     box-shadow: 0 3px 3px rgba(0,0,0,.2);
     
     list-style-type: none;
-    
+    overflow-y: auto;
     display: none;
 }
 
@@ -98,32 +87,74 @@ body {
     vertical-align: middle;
 }
 
-#location-list {
-    top: 320px;
-    bottom: 0;
-    position: absolute;
-    margin-bottom: 0;
-    overflow-y: auto;
+/* info box */
+
+#info-box {
+	background: #FFF;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	position: absolute;
+    overflow-y: hidden;
+    color: #555;
 }
 
-#location-list .list-group-item {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
+/* info box: header with movie intro */
+
+#movie-header {
+    height: 250px;
+    padding: 8px;
 }
 
 #movie-image {
-    float: left;
-    margin: 8px;
-}
-
-#movie-name-and-rate {
-    margin-left: 15px;
-    margin-top: 20px;
-    height: 250px;
+    width: 150px;
+    position: absolute;
     
-    font-size: 24px;
+    border: 1px solid #DDD;
 }
 
 #movie-intro-box {
+    margin-left: 160px;
+    height: 100%;
+}
+
+#movie-name {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+#movie-year {
+    font-size: 16px;
+    color: #999;
+}
+
+#movie-intro-content {
+    margin-top: 12px;
+}
+
+/* info box: tab view */
+
+#location-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#location-list li {
+    height: 120px;
+    cursor: pointer;
+    border-bottom: 1px solid #DDD;
+}
+
+.location-list-inline-helper {
+    display: inline-block;
+    height: 100%;
+    width: 10px;
+    vertical-align: middle;
+}
+
+#location-list li:hover {
+    background-color: #FAFAFA;
 }
