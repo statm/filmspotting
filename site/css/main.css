@@ -58,8 +58,7 @@ body {
 }
 
 #search-suggestion {
-	max-height: 700px;
-    overflow-y: auto;
+	height: 300px;
     padding: 8px 0;
     background-color: #FFF;
     
