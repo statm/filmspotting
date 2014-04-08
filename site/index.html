@@ -14,8 +14,6 @@
 
 </head>
 <body>
-	<div id="info-box"></div>
-
 	<div id="map-canvas">
 		<div id="overlay"></div>
 	</div>
@@ -24,6 +22,8 @@
 		<input id="search-input" type="text" class="form-control" placeholder="Search films or locations"/>
 		<div id="search-suggestion"></div>
 	</div>
+    
+    <div id="info-box"></div>
     
     <script id="suggestion-tmpl" type="text/html">
         {{#data}}
@@ -62,8 +62,10 @@
                 <div id="location-list-pane" class="tab-pane">
                     <ul id="location-list">
                     {{#locations}}
-                        <li>
-                            {{actual_location}}
+                        <li class="location-entry">
+                            <div>
+                                <p>{{actual_location}}</p>
+                            </div>
                         </li>
                     {{/locations}}
                     </ul>

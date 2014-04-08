@@ -1,5 +1,5 @@
-(function(document) {
-    "use strict";
+//(function(document) {
+//    "use strict";
     
 	$(document).ready(function() {
 		initMap();
@@ -37,6 +37,10 @@
     
     function onTypeAhead() {
         var inputText = $("#search-input").val();
+        if (inputText.length < 2) {
+            return;
+        }
+        
         var suggestions = getSuggestion(inputText);
         if (suggestions.length > 0) {
             showSearchSuggestion({data: suggestions});
@@ -108,7 +112,9 @@
     function onSelectMovie(movieData) {
         $("#search-input").val(movieData.name);
         hideSearchSuggestion();
+        
         showInfoBox(movieData);
+        
         clearMarkers();
         addMarkers(movieData.locations);
     }
@@ -153,8 +159,8 @@
     
     function initMap() {
         var mapOptions = {
-            center : new google.maps.LatLng(37.09024, -95.712891),
-            zoom : 5,
+            center : new google.maps.LatLng(40, -75),
+            zoom : 4,
             noClear : true,
             disableDefaultUI : true
         };
@@ -172,21 +178,44 @@
         for (var i = 0; i < locations.length; i ++) {
             var address = locations[i].actual_location;
             var geocodingURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + encodeURIComponent(address) + "&sensor=false";
-            $.getJSON(geocodingURL,
+            (function(i) {
+                $.getJSON(geocodingURL,
                       function(data) {
                           if (data.status == "OK"
                              && data.results.length > 0) {
+                              
                               var location = data.results[0].geometry.location;
+                              
                               var marker = new google.maps.Marker({
                                   position: new google.maps.LatLng(location.lat, location.lng),
-                                  map: map});
-                              markers.push(marker);
+                                  map: map,
+                                  animation: google.maps.Animation.DROP
+                              });
+                              markers[i] = marker;
+                              
+                              $(".location-entry").slice(i, i + 1).click(function() {
+                                  console.log(marker);
+                                  panTo(marker);
+                                  bounceMarker(marker);
+                              });
                           } else {
                               console.log("geocoding failed for address: " + address);
                           }
                       });
+            })(i);
         }
-        
+    }
+
+    function panTo(marker) {
+        console.log(marker.getPosition());
+        map.panTo(marker.getPosition());
+    }
+
+    function bounceMarker(marker) {
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+        setTimeout(function () {
+            marker.setAnimation(null);
+        }, 1400);
     }
     
-})(document);
+//})(document);
