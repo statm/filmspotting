@@ -43,6 +43,7 @@ body {
 	left: 0;
 	width: 0;
 	position: absolute;
+    overflow-y: hidden;
 }
 
 #search-box {
@@ -96,5 +97,26 @@ body {
     vertical-align: middle;
 }
 
-.suggestion-item img {
+#location-list {
+    top: 250px;
+    bottom: 0;
+    position: absolute;
+    margin-bottom: 0;
+    overflow-y: auto;
+}
+
+#location-list .list-group-item {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+#movie-image {
+    float: left;
+}
+
+#movie-intro-box {
+    float: left;
+    margin-left: 15px;
+    margin-top: 20px;
 }

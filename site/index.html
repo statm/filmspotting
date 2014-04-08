@@ -42,13 +42,13 @@
     </script>
     
     <script id="info-box-tmpl" type="text/html">
-        <img src="images/imdb/{{id}}.jpg"/>
-        <div>{{name}}</div><div>({{year}})</div>
-        <ul>
-            {{#locations}}
-                <li>{{movie_location}} -> {{actual_location}}</li>
-            {{/locations}}
-        </ul>
+        <img src="images/imdb/{{id}}.jpg" width="150" id="movie-image"/>
+        <div id="movie-intro-box">{{name}}<br/>({{year}})</div>
+        <div id="location-list">
+        {{#locations}}
+            <a href="#" class="list-group-item">{{movie_location}} -> {{actual_location}}</a>
+        {{/locations}}
+        </div>
     </script>
 </body>
     
