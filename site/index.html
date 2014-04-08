@@ -9,6 +9,7 @@
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAopy9pygs2h40C94HY7elt7ftcIjrt__g&sensor=false"></script>
 <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
 </head>
@@ -38,7 +39,13 @@
     
     <script id="info-box-tmpl" type="text/html">
         <img src="images/imdb/{{id}}.jpg" width="150" id="movie-image"/>
-        <div id="movie-intro-box">{{name}}<br/>({{year}})</div>
+        <div id="movie-name-and-rate">{{name}}<br/>({{year}})</div>
+        
+        <ul id="movie-intro-box" class="nav nav-tabs nav-justified">
+            <li class="active"><a href="#">Movie Info</a></li>
+            <li><a href="#">Locations</a></li>
+        </ul>
+        
         <div id="location-list">
         {{#locations}}
             <a href="#" class="list-group-item">{{movie_location}} -> {{actual_location}}</a>
