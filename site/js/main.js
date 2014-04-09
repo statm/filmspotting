@@ -194,9 +194,9 @@
                               markers[i] = marker;
                               
                               $(".location-entry").slice(i, i + 1).click(function() {
-                                  console.log(marker);
                                   panTo(marker);
                                   bounceMarker(marker);
+                                  showStreetView(marker);
                               });
                           } else {
                               console.log("geocoding failed for address: " + address);
@@ -216,6 +216,17 @@
         setTimeout(function () {
             marker.setAnimation(null);
         }, 1400);
+    }
+
+
+    // ======================================
+    //  Street View Control
+    // ======================================
+    
+    function showStreetView(marker) {
+        var panorama = map.getStreetView();
+        panorama.setPosition(marker.getPosition());
+        panorama.setVisible(true);
     }
     
 //})(document);
