@@ -71,7 +71,7 @@ body {
     cursor: pointer;
 }
 
-#search-suggestion li:hover {
+.search-suggestion-active {
     background-color: #0097CF;
     color: #FFF;
 }

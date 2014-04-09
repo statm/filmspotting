@@ -20,7 +20,7 @@
 
 	<div id="search-box">
 		<input id="search-input" type="text" class="form-control" placeholder="Search films or locations"/>
-		<div id="search-suggestion"></div>
+		<ul id="search-suggestion"></ul>
 	</div>
     
     <div id="info-box"></div>
@@ -75,9 +75,9 @@
     </script>
     
     <script id="marker-window-tmpl" type="text/html">
-        <h3>{{actual_location}}</h3>
+        <h6>{{actual_location}}</h6>
         {{#movie_location}}
-        <h4>as {{movie_location}}</h4>
+        <h7>{{movie_location}}</h7>
         {{/movie_location}}
     </script>
 </body>

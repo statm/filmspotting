@@ -16,6 +16,8 @@
 		onResize();
 		$(window).resize(onResize);
 		$("#search-input").on("input", null, null, onSearchInput);
+        $("#search-input").on("keydown", null, null, onSearchKeyPress);
+        $("#search-input").focus();
 	}
 
 	function onResize() {
@@ -34,6 +36,24 @@
         
         onTypeAhead();
 	}
+    
+    function onSearchKeyPress(event) {
+        if (event.keyCode == 38) { // up
+            selectedIndex -= 1;
+            if (selectedIndex < 0) {
+                selectedIndex = 0;
+            }
+            applySelectedIndex();
+            event.preventDefault();
+        } else if (event.keyCode == 40) { // down
+            selectedIndex += 1;
+            if (selectedIndex >= $(".suggestion-item").length) {
+                selectedIndex = $(".suggestion-item").length - 1;
+            }
+            applySelectedIndex();
+            event.preventDefault();
+        }
+    }
     
     function onTypeAhead() {
         var inputText = $("#search-input").val();
@@ -101,7 +121,13 @@
             $(this).click(function() {
                 onSelectMovie(suggestionData.data[index]);
             });
+            $(this).mousemove(function() {
+                selectedIndex = index;
+                applySelectedIndex();
+            });
         });
+        
+        applySelectedIndex();
 	}
 
 	function hideSearchSuggestion() {
@@ -117,6 +143,23 @@
         
         clearMarkers();
         addMarkers(movieData.locations);
+    }
+    
+    var selectedIndex = 0;
+    
+    function applySelectedIndex() {
+        var selectedElement;
+        
+        $(".suggestion-item").each(function(index) {
+            if (index == selectedIndex) {
+                $(this).addClass("search-suggestion-active");
+                selectedElement = $(this);
+            } else {
+                $(this).removeClass("search-suggestion-active");
+            }
+        });
+        
+        // TODO: ensure element visible
     }
     
     
@@ -163,7 +206,8 @@
             center : new google.maps.LatLng(40, -75),
             zoom : 4,
             noClear : true,
-            disableDefaultUI : true
+            disableDefaultUI : true,
+            mapTypeId: google.maps.MapTypeId.HYBRID
         };
         map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
     }
@@ -211,6 +255,8 @@
                                       content: Mustache.to_html($("#marker-window-tmpl").text(), locationInfo)
                                   });
                                   infoWindow.open(map, marker);
+                                  
+                                  panTo(marker);
                               });
                           } else {
                               console.log("geocoding failed for address: " + address);
@@ -222,6 +268,7 @@
 
     function panTo(marker) {
         map.panTo(marker.getPosition());
+        map.setZoom(21);
     }
 
     function bounceMarker(marker) {
