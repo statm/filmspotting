@@ -7,7 +7,7 @@ import gc
 import os
 
 data = []
-
+counter = 0
 def dump():
     f = open("movie_location_detail.json", "w+")
     f.write(json.dumps(data))
@@ -45,7 +45,6 @@ def get_movie_list():
         for entry in entries:
             temp = clean(entry.attrs["href"])
             temp = temp[0].lower() + "/" + temp
-            print temp
             result.append(temp)
     print "all movie ids from a to z collected."
     return result
@@ -59,8 +58,9 @@ def get_movie_info(movie_id):
     soup = BeautifulSoup(page)
       
     temp = soup.select("#details h1")[0].contents[0].strip()
-    movie_name = temp.split(",")[0]
-    movie_year = temp.split(",")[1]
+    pos = temp.rfind(',')
+    movie_name = temp[:pos+1]
+    movie_year = temp[pos+1:]
             
     #image info
     location_images = []
@@ -68,8 +68,6 @@ def get_movie_info(movie_id):
         location = detail.find("img")
         temp = clean(location.attrs["src"])
         location_img_url = "http://www.movie-locations.com/movies/" + temp[0] +"/"+ temp
-        #dlfile(location_img_url)
-        #location_img_name = location.attrs["alt"]
         location_img_desc = detail.find("p").text
         location_images.append({"location_img_url" : location_img_url,
         "location_img_desc" : location_img_desc})
@@ -81,6 +79,7 @@ def get_movie_info(movie_id):
     
     # return an object containing all data above
     return {
+            "id":counter,
             "name":movie_name,
             "year":movie_year,
             "location_images":location_images,
@@ -93,7 +92,6 @@ if __name__ == '__main__':
     #movie_list = json.load(temp)
     error_id = []
         
-    counter = 0
     for movie_id in movie_list:
         counter += 1
         print "visiting movie  " + str(counter)+ ": " + movie_id
