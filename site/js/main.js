@@ -1,5 +1,5 @@
-//(function(document) {
-//    "use strict";
+(function(document) {
+    "use strict";
     
 	$(document).ready(function() {
 		initMap();
@@ -28,7 +28,7 @@
 	function onSearchInput(event) {
 		if (!mapRevealed) {
 			revealMap();
-            setTimeout(onTypeAhead, 300);
+            setTimeout(onTypeAhead, 500);
             return;
 		}
         
@@ -156,6 +156,7 @@
     
     var map;
     var markers = [];
+    var infoWindow;
     
     function initMap() {
         var mapOptions = {
@@ -178,7 +179,7 @@
         for (var i = 0; i < locations.length; i ++) {
             var address = locations[i].actual_location;
             var geocodingURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + encodeURIComponent(address) + "&sensor=false";
-            (function(i) {
+            (function(i, locationInfo) {
                 $.getJSON(geocodingURL,
                       function(data) {
                           if (data.status == "OK"
@@ -189,6 +190,7 @@
                               var marker = new google.maps.Marker({
                                   position: new google.maps.LatLng(location.lat, location.lng),
                                   map: map,
+                                  title: location.actual_location,
                                   animation: google.maps.Animation.DROP
                               });
                               markers[i] = marker;
@@ -196,18 +198,29 @@
                               $(".location-entry").slice(i, i + 1).click(function() {
                                   panTo(marker);
                                   bounceMarker(marker);
-                                  showStreetView(marker);
+                                  // showStreetView(marker);
+                                  
+                              });
+                              
+                              google.maps.event.addListener(marker, "click", function() {
+                                  if (infoWindow) {
+                                      infoWindow.close();
+                                  }
+                                  infoWindow = new google.maps.InfoWindow({
+                                      maxWidth: 400,
+                                      content: Mustache.to_html($("#marker-window-tmpl").text(), locationInfo)
+                                  });
+                                  infoWindow.open(map, marker);
                               });
                           } else {
                               console.log("geocoding failed for address: " + address);
                           }
                       });
-            })(i);
+            })(i, locations[i]);
         }
     }
 
     function panTo(marker) {
-        console.log(marker.getPosition());
         map.panTo(marker.getPosition());
     }
 
@@ -229,4 +242,4 @@
         panorama.setVisible(true);
     }
     
-//})(document);
+})(document);
