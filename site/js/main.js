@@ -30,7 +30,6 @@
 	function onSearchInput(event) {
 		if (!mapRevealed) {
 			revealMap();
-            setTimeout(onTypeAhead, 500);
             return;
 		}
         
@@ -52,8 +51,12 @@
             }
             applySelectedIndex();
             event.preventDefault();
+        } else if (event.keyCode == 13) { // enter
+            onSelectMovie();
         }
     }
+    
+    var suggestionData;
     
     function onTypeAhead() {
         var inputText = $("#search-input").val();
@@ -62,9 +65,12 @@
         }
         
         var suggestions = getSuggestion(inputText);
+        
         if (suggestions.length > 0) {
-            showSearchSuggestion({data: suggestions});
+            suggestionData = {data: suggestions};
+            showSearchSuggestion();
         } else {
+            suggestionData = {};
             hideSearchSuggestion();
         }
     }
@@ -73,7 +79,7 @@
 
 	function revealMap() {
         mapRevealed = true;
-		var duration = 300;
+		var duration = 400;
 		$("#search-box").animate({top: 40}, {duration : duration, queue : false});
 		$("#overlay").animate({opacity: 0}, {duration : duration, queue : false}).hide();
 		$({blurRadius: 7}).animate({blurRadius: 0}, {
@@ -106,8 +112,10 @@
 		$("#info-box").animate({width: 0}, {duration : duration, queue : false});
 		$("#search-box").animate({"margin-left": 0, left: 200, right: 200}, {duration : duration, queue : false});
 	}
+    
+    var lastMouseX, lastMouseY;
 
-	function showSearchSuggestion(suggestionData) {
+	function showSearchSuggestion() {
         $("#search-input").addClass("search-input-with-suggestion");
         
         var suggestionPanel = $("#search-suggestion");
@@ -119,11 +127,26 @@
         
         $(".suggestion-item").each(function(index) {
             $(this).click(function() {
-                onSelectMovie(suggestionData.data[index]);
+                if (selectedIndex != index) {
+                    selectedIndex = index;
+                    applySelectedIndex();
+                }
+                
+                onSelectMovie();
             });
-            $(this).mousemove(function() {
-                selectedIndex = index;
-                applySelectedIndex();
+            $(this).mousemove(function(event) {
+                if (event.pageX == lastMouseX
+                    && event.pageY == lastMouseY) {
+                    return;
+                }
+                
+                lastMouseX = event.pageX;
+                lastMouseY = event.pageY;
+                
+                if (selectedIndex != index) {
+                    selectedIndex = index;
+                    applySelectedIndex();
+                }
             });
         });
         
@@ -135,7 +158,9 @@
 		$("#search-suggestion").hide();
 	}
     
-    function onSelectMovie(movieData) {
+    function onSelectMovie() {
+        var movieData = suggestionData.data[selectedIndex]
+        
         $("#search-input").val(movieData.name);
         hideSearchSuggestion();
         
@@ -143,6 +168,8 @@
         
         clearMarkers();
         addMarkers(movieData.locations);
+        
+        $("#search-input").blur();
     }
     
     var selectedIndex = 0;
@@ -159,7 +186,25 @@
             }
         });
         
-        // TODO: ensure element visible
+        // ensure element visible
+        var container = $("#search-suggestion");
+        
+        var topDelta = selectedElement.offset().top - container.offset().top;
+        if (topDelta < 0) {
+            container.animate({"scrollTop" : container.scrollTop() + topDelta},
+                              {duration: 40, 
+                               queue: false
+                              });
+        }
+        
+        var bottomDelta = selectedElement.offset().top + selectedElement.height()
+                        - container.offset().top - container.height() - 16;
+        if (bottomDelta > 0) {
+            container.animate({"scrollTop" : container.scrollTop() + bottomDelta},
+                              {duration: 40, 
+                               queue: false
+                              });
+        }
     }
     
     
