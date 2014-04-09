@@ -110,7 +110,6 @@ body {
 #movie-image {
     width: 150px;
     position: absolute;
-    
     border: 1px solid #DDD;
 }
 
@@ -161,4 +160,13 @@ body {
 .location-entry p {
     display: table-cell;
     vertical-align: middle;
+}
+
+.info-pane {
+    position: absolute;
+    top: 292px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow:auto;
 }
