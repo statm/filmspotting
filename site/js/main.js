@@ -217,7 +217,7 @@
     function loadData() {
         $.ajax({
             type: "GET",
-            url: "data/imdb_data.json",
+            url: "data/link.json",
             success: function(result) {
                 data = result;
             },
@@ -304,7 +304,7 @@
                                   panTo(marker);
                               });
                           } else {
-                              console.log("geocoding failed for address: " + address);
+                              console.log("geocoding failed for address: " + locationInfo.actual_location);
                           }
                       });
             })(i, locations[i]);
