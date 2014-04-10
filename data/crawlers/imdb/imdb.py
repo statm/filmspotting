@@ -1,3 +1,4 @@
+import _socket
 import json
 import os
 import re
@@ -6,7 +7,6 @@ from urllib2 import URLError, urlopen, HTTPError
 import urllib2
 
 from bs4 import BeautifulSoup
-import _socket
 
 
 counter = 0
@@ -78,7 +78,8 @@ def get_movie_info(movie_id):
     for location in soup.select(".soda"):
         actual_location = location.select("dt a")[0].contents[0].strip()
         movie_location = location.select("dd")[0].contents[0].strip()
-        movie_locations.append({"actual_location":actual_location, "movie_location":movie_location})
+        geocoding = json.load(urllib2.urlopen("https://maps.googleapis.com/maps/api/geocode/json?address=" + urllib2.quote(actual_location) + "&sensor=false"))
+        movie_locations.append({"actual_location":actual_location, "movie_location":movie_location, "geocoding": geocoding, "source": "imdb"})
 
     # return an object containing all data above
     return {"index":counter,
