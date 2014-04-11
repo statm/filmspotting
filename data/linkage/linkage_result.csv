@@ -1,336 +1,334 @@
-"id@sourceA","name@sourceA","year@sourceA","id@sourceB","name@sourceB","year@sourceB","Confidence"
-"tt2194499","About Time","2013","8","About Time","2013","100"
-"tt0096754","The Abyss","1989","13","The Abyss","1989","100"
-"tt0029843","The Adventures of Robin Hood","1938","30","the adventures of robin hood","1938","100"
-"tt0043265","The African Queen","1951","32","The African Queen","1951","100"
-"tt0088680","After Hours","1985","33","After Hours","1985","100"
-"tt0068182","Aguirre, the Wrath of God","1972","39","Aguirre, The Wrath of God","1972","100"
-"tt0080339","Airplane!","1980","41","airplane!","1980","100"
-"tt0109045","The Adventures of Priscilla, Queen of the Desert","1994","28","The Adventures of Priscilla, Queen of the Desert","1994","100"
-"tt0078748","Alien","1979","53","Alien","1979","100"
-"tt0090605","Aliens","1986","54","AlienS","1986","100"
-"tt0042192","All About Eve","1950","56","All About Eve","1950","100"
-"tt0020629","All Quiet on the Western Front","1930","58","All Quiet on the Western Front","1930","100"
-"tt0074119","All the President's Men","1976","61","All the President's Men","1976","100"
-"tt0181875","Almost Famous","2000","62","Almost Famous","2000","100"
-"tt0086879","Amadeus","1984","66","Amadeus","1984","100"
-"tt0169547","American Beauty","1999","74","American Beauty","1999","100"
-"tt0120586","American History X","1998","77","American History X","1998","100"
-"tt0071562","The Godfather: Part II","1974","94","The Godfather Part 2","1974","100"
-"tt0069704","American Graffiti","1973","76","American Graffiti","1973","100"
-"tt0075686","Annie Hall","1977","100","Annie Hall","1977","100"
-"tt1800241","American Hustle","2013","78","American Hustle","2013","100"
-"tt0144084","American Psycho","2000","81","American Psycho","2000","100"
-"tt0078788","Apocalypse Now","1979","105","Apocalypse Now","1979","100"
-"tt0305206","American Splendor","2003","82","American Splendor","2003","100"
-"tt0082010","An American Werewolf in London","1981","83","An American Werewolf in London","1981","100"
-"tt0119822","As Good as It Gets","1997","112","As Good As It Gets","1997","100"
-"tt0783233","Atonement","2007","117","Atonement","2007","100"
-"tt0099077","Awakenings","1990","127","Awakenings","1990","100"
-"tt0096874","Back to the Future Part II","1989","134","back to the future part ii","1989","100"
-"tt0096874","Back to the Future Part II","1989","135","Back to the Future Part III","1989","100"
-"tt0112384","Apollo 13","1995","106","APOLLO 13","1995","100"
-"tt0088763","Back to the Future","1985","133","back to the future","1985","100"
-"tt0069762","Badlands","1973","144","Badlands","1973","100"
-"tt0101410","Barton Fink","1991","151","Barton Fink","1991","100"
-"tt0072684","Barry Lyndon","1975","150","Barry Lyndon","1975","100"
-"tt0338751","The Aviator","2004","125","The Aviator","2004","100"
-"tt0372784","Batman Begins","2005","156","Batman Begins","2005","100"
-"tt0112471","Before Sunrise","1995","172","Before Sunrise","1995","100"
-"tt0268978","A Beautiful Mind","2001","167","A Beautiful Mind","2001","100"
-"tt0381681","Before Sunset","2004","173","Before Sunset","2004","100"
-"tt0078841","Being There","1979","176","Being There","1979","100"
-"tt0096895","Batman","1989","154","Batman","1989","100"
-"tt0052618","Ben-Hur","1959","183","Ben Hur","1959","100"
-"tt0249462","Billy Elliot","2000","203","BILLY ELLIOT","2000","100"
-"tt0319061","Big Fish","2003","197","BIG FISH","2003","100"
-"tt0056869","The Birds","1963","208","The Birds","1963","100"
-"tt0265086","Black Hawk Down","2001","210","Black Hawk Down","2001","100"
-"tt0118715","The Big Lebowski","1998","198","The Big Lebowski","1998","100"
-"tt0038355","The Big Sleep","1946","199","The Big Sleep","1946","100"
-"tt0071230","Blazing Saddles","1974","216","BLAZING SADDLES","1974","100"
-"tt0086979","Blood Simple.","1984","221","Blood Simple","1984","100"
-"tt0060176","Blow-Up","1966","223","Blowup","1966","100"
-"tt0090756","Blue Velvet","1986","226","Blue Velvet","1986","100"
-"tt0118749","Boogie Nights","1997","233","Boogie Nights","1997","100"
-"tt0083658","Blade Runner","1982","214","blade runner","1982","100"
-"tt0080455","The Blues Brothers","1980","227","The Blues Brothers","1980","100"
-"tt0372183","The Bourne Supremacy","2004","239","The Bourne Supremacy","2004","100"
-"tt0101507","Boyz n the Hood","1991","245","Boyz n the hood","1991","100"
-"tt0258463","The Bourne Identity","2002","238","The Bourne Identity","2002","100"
-"tt0054698","Breakfast at Tiffany's","1961","249","Breakfast At Tiffany's","1961","100"
-"tt0440963","The Bourne Ultimatum","2007","240","The Bourne Ultimatum","2007","100"
-"tt0088846","Brazil","1985","248","Brazil","1985","100"
-"tt0091042","Ferris Bueller's Day Off","1986","250","Ferris Bueller���s Day Off","1986","100"
-"tt0068327","Cabaret","1972","269","Cabaret","1972","100"
-"tt0106519","Carlito's Way","1993","278","CARLITO���S WAY","1993","100"
-"tt0824747","Changeling","2008","298","Changeling","2008","100"
-"tt0112573","Braveheart","1995","247","Braveheart","1995","100"
-"tt0381061","Casino Royale","2006","293","Casino Royale","2006","100"
-"tt0264464","Catch Me If You Can","2002","294","Catch Me If You Can","2002","100"
-"tt0171804","Boys Don't Cry","1999","243","Boys Don���t Cry","1999","100"
-"tt0056923","Charade","1963","301","Charade","1963","100"
-"tt0050212","The Bridge on the River Kwai","1957","256","The Bridge On The River Kwai","1957","100"
-"tt0112579","The Bridges of Madison County","1995","257","The Bridges of Madison County","1995","100"
-"tt0075860","Close Encounters of the Third Kind","1977","324","Close Encounters of the Third Kind","1977","100"
-"tt0085334","A Christmas Story","1983","314","A Christmas Story","1983","100"
-"tt0062765","Bullitt","1968","266","Bullitt","1968","100"
-"tt0094947","Dangerous Liaisons","1988","353","Dangerous Liaisons","1988","100"
-"tt0034583","Casablanca","1942","292","Casablanca","1942","100"
-"tt0109445","Clerks.","1994","321","Clerks","1994","100"
-"tt0106677","Dazed and Confused","1993","368","Dazed and Confused","1993","100"
-"tt0103939","Chaplin","1992","300","Chaplin","1992","100"
-"tt0375679","Crash","2004","339","CraSH","2004","100"
-"tt0071315","Chinatown","1974","312","Chinatown","1974","100"
-"tt0190332","Crouching Tiger, Hidden Dragon","2000","343","Crouching tiger, Hidden dragon","2000","100"
-"tt0099348","Dances with Wolves","1990","352","Dances With Wolves","1990","100"
-"tt0061578","The Dirty Dozen","1967","396","The Dirty Dozen","1967","100"
-"tt0095765","Cinema Paradiso","1988","319","Cinema Paradiso","1988","100"
-"tt0077402","Dawn of the Dead","1978","361","Dawn of the  Dead","1978","100"
-"tt0066921","A Clockwork Orange","1971","323","A Clockwork Orange","1971","100"
-"tt0369339","Collateral","2004","328","Collateral","2004","100"
-"tt0119008","Donnie Brasco","1997","409","Donnie Brasco","1997","100"
-"tt0097165","Dead Poets Society","1989","372","Dead Poets Society","1989","100"
-"tt0083866","E.T. the Extra-Terrestrial","1982","420","E.T. ��?The Extraterrestrial","1982","100"
-"tt0071562","The Godfather: Part II","1974","342","The Godfather Part 2","1974","100"
-"tt0765443","Eastern Promises","2007","423","Eastern promises","2007","100"
-"tt0468569","The Dark Knight","2008","356","The Dark Knight","2008","100"
-"tt1345836","The Dark Knight Rises","2012","357","The Dark Knight Rises","2012","100"
-"tt0092965","Empire of the Sun","1987","437","Empire of the Sun","1987","100"
-"tt0097216","Do the Right Thing","1989","403","Do The Right Thing","1989","100"
-"tt0059113","Doctor Zhivago","1965","406","Doctor Zhivago","1965","100"
-"tt0072890","Dog Day Afternoon","1975","407","Dog Day Afternoon","1975","100"
-"tt0077416","The Deer Hunter","1978","380","The Deer Hunter","1978","100"
-"tt0407887","The Departed","2006","383","The Departed","2006","100"
-"tt0109707","Ed Wood","1994","425","Ed Wood","1994","100"
-"tt0308644","Finding Neverland","2004","465","Finding Neverland","2004","100"
-"tt0099487","Edward Scissorhands","1990","428","EdWARD SCISSORHANDS","1990","100"
-"tt0112864","Die Hard: With a Vengeance","1995","394","Die Hard with a Vengeance","1995","100"
-"tt0095016","Die Hard","1988","393","Die Hard","1988","100"
-"tt0067116","The French Connection","1971","483","The French Connection","1971","100"
-"tt0246578","Donnie Darko","2001","410","Donnie Darko","2001","100"
-"tt0070047","The Exorcist","1973","447","The Exorcist","1973","100"
-"tt0036775","Double Indemnity","1944","413","Double Indemnity","1944","100"
-"tt0119174","The Game","1997","495","The Game","1997","100"
-"tt0091042","Ferris Bueller's Day Off","1986","460","Ferris Bueller���s Day Off","1986","100"
-"tt0964517","The Fighter","2010","463","The Fighter","2010","100"
-"tt0119177","Gattaca","1997","500","Gattaca","1997","100"
-"tt0080678","The Elephant Man","1980","432","The Elephant Man","1980","100"
-"tt0079116","Escape from Alcatraz","1979","441","Escape From Alcatraz","1979","100"
-"tt0087332","Ghostbusters","1984","509","Ghostbusters","1984","100"
-"tt0080684","Star Wars: Episode V - The Empire Strikes Back","1980","438","Star Wars Episode V: The Empire Strikes Back","1980","100"
-"tt0338013","Eternal Sunshine of the Spotless Mind","2004","444","Eternal sunshine of the spotless mind","2004","100"
-"tt0106856","Falling Down","1993","453","Falling Down","1993","100"
-"tt0058150","Goldfinger","1964","524","Goldfinger","1964","100"
-"tt0452623","Gone Baby Gone","2007","525","Gone baby gone","2007","100"
-"tt0097351","Field of Dreams","1989","461","Field of Dreams","1989","100"
-"tt0089218","The Goonies","1985","532","The Goonies","1985","100"
-"tt0095159","A Fish Called Wanda","1988","467","A FISH CALLED WANDA","1988","100"
-"tt0101889","The Fisher King","1991","468","The Fisher King","1991","100"
-"tt0137523","Fight Club","1999","462","Fight Club","1999","100"
-"tt0097441","Glory","1989","517","Glory","1989","100"
-"tt0057076","From Russia with Love","1963","490","From Russia With Love","1963","100"
-"tt0109830","Forrest Gump","1994","480","Forrest Gump","1994","100"
-"tt0061722","The Graduate","1967","533","The Graduate","1967","100"
-"tt0333766","Garden State","2004","499","Garden State","2004","100"
-"tt0083987","Gandhi","1982","496","Gandhi","1982","100"
-"tt0107048","Groundhog Day","1993","548","GROUNDHOG DAY","1993","100"
-"tt0099674","The Godfather: Part III","1990","522","The Godfather Part 3","1990","100"
-"tt1250777","Kick-Ass","2010","597","Kick-Ass","2010","100"
-"tt0172495","Gladiator","2000","515","Gladiator","2000","100"
-"tt0068646","The Godfather","1972","520","the godfather","1972","100"
-"tt0071562","The Godfather: Part II","1974","521","The Godfather Part 2","1974","100"
-"tt0780536","In Bruges","2008","563","In Bruges","2008","100"
-"tt0031381","Gone with the Wind","1939","529","Gone With the Wind","1939","100"
-"tt0119217","Good Will Hunting","1997","530","Good Will Hunting","1997","100"
-"tt0099685","Goodfellas","1990","531","Goodfellas","1990","100"
-"tt0371746","Iron Man","2008","575","Iron Man","2008","100"
-"tt1205489","Gran Torino","2008","534","Gran Torino","2008","100"
-"tt0032551","The Grapes of Wrath","1940","538","The Grapes Of Wrath","1940","100"
-"tt0093389","The Last Emperor","1987","629","The Last Emperor","1987","100"
-"tt0104691","The Last of the Mohicans","1992","630","The Last Of The Mohicans","1992","100"
-"tt0073195","Jaws","1975","586","Jaws","1975","100"
-"tt0120689","The Green Mile","1999","543","The Green Mile","1999","100"
-"tt0325710","The Last Samurai","2003","632","The Last Samurai","2003","100"
-"tt0107290","Jurassic Park","1993","590","Jurassic Park","1993","100"
-"tt0087469","Indiana Jones and the Temple of Doom","1984","568","Indiana Jones and the Temple Of Doom","1984","100"
-"tt0378194","Kill Bill: Vol. 2","2004","599","Kill Bill: Vol. 2","2004","100"
-"tt2042568","Inside Llewyn Davis","2013","571","Inside Llewyn Davis","2013","100"
-"tt0110148","Interview with the Vampire: The Vampire Chronicles","1994","572","Interview with the Vampire: The Vampire Chronicles","1994","100"
-"tt0024216","King Kong","1933","605","king kong","1933","100"
-"tt1375666","Inception","2010","565","Inception","2010","100"
-"tt0119396","Jackie Brown","1997","583","jackie brown","1997","100"
-"tt0097576","Indiana Jones and the Last Crusade","1989","567","Indiana Jones and the Last Crusade","1989","100"
-"tt0361748","Inglourious Basterds","2009","569","Inglourious Basterds","2009","100"
-"tt0030341","The Lady Vanishes","1938","623","The Lady Vanishes","1938","100"
-"tt0038650","It's a Wonderful Life","1946","580","IT���S A WONDERFUL LIFE","1946","100"
-"tt0116922","Lost Highway","1997","668","Lost Highway","1997","100"
-"tt0335266","Lost in Translation","2003","669","Lost In Translation","2003","100"
-"tt0314331","Love Actually","2003","672","Love Actually","2003","100"
-"tt0266697","Kill Bill: Vol. 1","2003","598","Kill Bill: Vol. 1","2003","100"
-"tt0104797","Malcolm X","1992","684","Malcolm X","1992","100"
-"tt0119488","L.A. Confidential","1997","616","L.A. Confidential","1997","100"
-"tt0416320","Match Point","2005","700","Match Point","2005","100"
-"tt0095497","The Last Temptation of Christ","1988","634","The last temptation Of Christ","1988","100"
-"tt0091605","The Name of the Rose","1986","707","The Name of the rose","1986","100"
-"tt0093409","Lethal Weapon","1987","646","Lethal Weapon","1987","100"
-"tt0056172","Lawrence of Arabia","1962","637","Lawrence of Arabia","1962","100"
-"tt0110413","Léon: The Professional","1994","644","Leon ��?The Professional","1994","100"
-"tt1276104","Looper","2012","663","Looper","2012","100"
-"tt0079522","Manhattan","1979","693","Manhattan","1979","100"
-"tt0190590","O Brother, Where Art Thou?","2000","732","O Brother, Where Art thou?","2000","100"
-"tt0240772","Ocean's Eleven","2001","734","Ocean's Eleven","2001","100"
-"tt0120735","Lock, Stock and Two Smoking Barrels","1998","657","Lock, Stock and Two Smoking Barrels","1998","100"
-"tt0082694","Mad Max 2: The Road Warrior","1981","680","Mad Max 2: The road warrior","1981","100"
-"tt0120737","The Lord of the Rings: The Fellowship of the Ring","2001","664","Lord of the Rings: The Fellowship of the Ring","2001","100"
-"tt0063350","Night of the Living Dead","1968","716","Night of the Living Dead","1968","100"
-"tt0167261","The Lord of the Rings: The Two Towers","2002","665","Lord of the Rings: The Two Towers","2002","100"
-"tt0167260","The Lord of the Rings: The Return of the King","2003","666","Lord of the Rings: The Return of the King","2003","100"
-"tt0049470","The Man Who Knew Too Much","1956","690","The Man Who Knew Too Much","1956","100"
-"tt0332280","The Notebook","2004","724","THE Notebook","2004","100"
-"tt0074860","Marathon Man","1976","696","Marathon Man","1976","100"
-"tt0022100","M","1931","674","M","1931","100"
-"tt0107818","Philadelphia","1993","772","Philadelphia","1993","100"
-"tt0087800","A Nightmare on Elm Street","1984","718","A Nightmare on Elm Street","1984","100"
-"tt0414387","Pride & Prejudice","2005","791","Pride and Prejudice","2005","100"
-"tt0465551","Notes on a Scandal","2006","725","Notes on a Scandal","2006","100"
-"tt0133093","The Matrix","1999","701","The Matrix","1999","100"
-"tt0087884","Paris, Texas","1984","757","Paris, Texas","1984","100"
-"tt0075005","The Omen","1976","740","The Omen","1976","100"
-"tt0477348","No Country for Old Men","2007","719","No Country For Old Men","2007","100"
-"tt0053125","North by Northwest","1959","721","North By Northwest","1959","100"
-"tt1659337","The Perks of Being a Wallflower","2012","768","The Perks Of Being A Wallflower","2012","100"
-"tt0048545","Rebel Without a Cause","1955","825","Rebel Without A Cause","1955","100"
-"tt0095765","Cinema Paradiso","1988","730","Cinema Paradiso","1988","100"
-"tt0059646","Repulsion","1965","831","Repulsion","1965","100"
-"tt0325980","Pirates of the Caribbean: The Curse of the Black Pearl","2003","776","Pirates of the Caribbean: Curse of the Black Pearl","2003","100"
-"tt0063442","Planet of the Apes","1968","781","Planet of the Apes","1968","100"
-"tt0047296","On the Waterfront","1954","743","On The Waterfront","1954","100"
-"tt0257044","Road to Perdition","2002","845","Road To Perdition","2002","100"
-"tt0093748","Planes, Trains & Automobiles","1987","780","Planes, Trains & Automobiles","1987","100"
-"tt0120789","Pleasantville","1998","784","Pleasantville","1998","100"
-"tt0050825","Paths of Glory","1957","762","Paths of Glory","1957","100"
-"tt0128445","Rushmore","1998","866","Rushmore","1998","100"
-"tt0047437","Sabrina","1954","870","Sabrina","1954","100"
-"tt0095953","Rain Man","1988","814","Rain Man","1988","100"
-"tt0482571","The Prestige","2006","788","The Prestige","2006","100"
-"tt0107943","The Remains of the Day","1993","830","The Remains of the Day","1993","100"
-"tt0093779","The Princess Bride","1987","794","THE PRINCESS BRIDE","1987","100"
-"tt0114388","Sense and Sensibility","1995","905","Sense And Sensibility","1995","100"
-"tt0054215","Psycho","1960","800","Psycho","1960","100"
-"tt0070666","Serpico","1973","908","Serpico","1973","100"
-"tt0110912","Pulp Fiction","1994","803","Pulp Fiction","1994","100"
-"tt0075148","Rocky","1976","852","Rocky","1976","100"
-"tt0081398","Raging Bull","1980","811","Raging Bull","1980","100"
-"tt0082971","Raiders of the Lost Ark","1981","812","Raiders Of The Lost Ark","1981","100"
-"tt0046250","Roman Holiday","1953","855","Roman Holiday","1953","100"
-"tt1318514","Rise of the Planet of the Apes","2011","839","Rise Of The Planet Of The Apes","2011","100"
-"tt0063522","Rosemary's Baby","1968","859","Rosemary's Baby","1968","100"
-"tt0047396","Rear Window","1954","823","Rear Window","1954","100"
-"tt1074638","Skyfall","2012","933","Skyfall","2012","100"
-"tt0032976","Rebecca","1940","824","Rebecca","1940","100"
-"tt1285016","The Social Network","2010","939","THE SOCIAL NETWORK","2010","100"
-"tt0093870","RoboCop","1987","850","Robocop","1987","100"
-"tt0180093","Requiem for a Dream","2000","832","Requiem For a Dream","2000","100"
-"tt0105236","Reservoir Dogs","1992","833","Reservoir Dogs","1992","100"
-"tt0086190","Star Wars: Episode VI - Return of the Jedi","1983","834","Star Wars Episode VI: Return Of The Jedi","1983","100"
-"tt0265666","The Royal Tenenbaums","2001","860","The Royal Tenenbaums","2001","100"
-"tt0105323","Scent of a Woman","1992","891","Scent of a woman","1992","100"
-"tt0121766","Star Wars: Episode III - Revenge of the Sith","2005","973","Star Wars Episode III: Revenge Of The Sith","2005","100"
-"tt0049730","The Searchers","1956","902","The Searchers","1956","100"
-"tt0486655","Stardust","2007","977","Stardust","2007","100"
-"tt0036342","Shadow of a Doubt","1943","914","Shadow Of A Doubt","1943","100"
-"tt0446029","Scott Pilgrim vs. the World","2010","895","Scott Pilgrim vs The World","2010","100"
-"tt0365748","Shaun of the Dead","2004","921","Shaun Of The Dead","2004","100"
-"tt1130884","Shutter Island","2010","928","Shutter Island","2010","100"
-"tt0120815","Saving Private Ryan","1998","885","SAVING PRIVATE RYAN","1998","100"
-"tt0069281","Sleuth","1972","937","Sleuth","1972","100"
-"tt0086250","Scarface","1983","888","Scarface","1983","100"
-"tt0108052","Schindler's List","1993","892","Schindler���s List","1993","100"
-"tt0059742","The Sound of Music","1965","944","The Sound of Music","1965","100"
-"tt0988045","Sherlock Holmes","2009","924","Sherlock Holmes","2009","100"
-"tt0054331","Spartacus","1960","946","Spartacus","1960","100"
-"tt0375063","Sideways","2004","930","Sideways","2004","100"
-"tt0117665","Sleepers","1996","934","Sleepers","1996","100"
-"tt0114369","Se7en","1995","910","seven","1995","100"
-"tt0945513","Source Code","2011","945","Source Code","2011","100"
-"tt0181865","Traffic","2000","1051","Traffic","2000","100"
-"tt0139654","Training Day","2001","1052","Training Day","2001","100"
-"tt0796366","Star Trek","2009","969","Star Trek","2009","100"
-"tt1408101","Star Trek Into Darkness","2013","970","Star Trek INTO DARKNESS","2013","100"
-"tt0111161","The Shawshank Redemption","1994","922","The Shawshank Redemption","1994","100"
-"tt0081505","The Shining","1980","925","The Shining","1980","100"
-"tt0102926","The Silence of the Lambs","1991","931","The Silence Of The Lambs","1991","100"
-"tt0167404","The Sixth Sense","1999","932","The Sixth Sense","1999","100"
-"tt0208092","Snatch.","2000","938","Snatch","2000","100"
-"tt0067800","Straw Dogs","1971","984","Straw Dogs","1971","100"
-"tt0088247","The Terminator","1984","1006","The Terminator","1984","100"
-"tt0829482","Superbad","2007","991","Superbad","2007","100"
-"tt0092005","Stand by Me","1986","960","Stand By Me","1986","100"
-"tt0108550","What's Eating Gilbert Grape","1993","1112","What���s eating gilbert grape","1993","100"
-"tt0088258","This Is Spinal Tap","1984","1022","This Is Spinal Tap","1984","100"
-"tt0096438","Who Framed Roger Rabbit","1988","1117","Who Framed Roger Rabbit","1988","100"
-"tt0070917","The Wicker Man","1973","1120","The Wicker Man","1973","100"
-"tt0072271","The Texas Chain Saw Massacre","1974","1011","The Texas Chain Saw Massacre","1974","100"
-"tt0080684","Star Wars: Episode V - The Empire Strikes Back","1980","975","Star Wars Episode V: The Empire Strikes Back","1980","100"
-"tt0086190","Star Wars: Episode VI - Return of the Jedi","1983","976","Star Wars Episode VI: Return Of The Jedi","1983","100"
-"tt0070735","The Sting","1973","981","The Sting","1973","100"
-"tt1270798","X-Men: First Class","2011","1145","X-Men: First class","2011","100"
-"tt0097576","Indiana Jones and the Last Crusade","1989","987","Indiana Jones and the Last Crusade","1989","100"
-"tt0097576","Indiana Jones and the Last Crusade","1989","988","Indiana Jones and the Last Crusade","1989","100"
-"tt0048728","To Catch a Thief","1955","1038","To Catch A Thief","1955","100"
-"tt0108399","True Romance","1993","1061","True Romance","1993","100"
-"tt0120382","The Truman Show","1998","1062","The Truman Show","1998","100"
-"tt0075314","Taxi Driver","1976","1001","Taxi Driver","1976","100"
-"tt0338751","The Aviator","2004","1046","The Aviator","2004","100"
-"tt0100802","Total Recall","1990","1047","Total Recall","1990","100"
-"tt0840361","The Town","2010","1049","The Town","2010","100"
-"tt0103064","Terminator 2: Judgment Day","1991","1007","Terminator 2: Judgment Day","1991","100"
-"tt0094226","The Untouchables","1987","1078","The Untouchables","1987","100"
-"tt0041959","The Third Man","1949","1018","The Third Man","1949","100"
-"tt0056592","To Kill a Mockingbird","1962","1039","To Kill A Mockingbird","1962","100"
-"tt0117951","Trainspotting","1996","1053","Trainspotting","1996","100"
-"tt0098635","When Harry Met Sally...","1989","1114","When Harry Met Sally...","1989","100"
-"tt0190332","Crouching Tiger, Hidden Dragon","2000","1127","Crouching tiger, Hidden dragon","2000","100"
-"tt0114814","The Usual Suspects","1995","1080","The Usual Suspects","1995","100"
-"tt0290334","X2","2003","1142","X2","2003","100"
-"tt0434409","V for Vendetta","2005","1081","V For Vendetta","2005","100"
-"tt0052357","Vertigo","1958","1089","Vertigo","1958","100"
-"tt0094721","Beetlejuice","1988","171","Beetlejuice","1988","100"
-"tt0086960","Beverly Hills Cop","1984","186","Beverly Hills Cop","1984","100"
-"tt0993846","The Wolf of Wall Street","2013","1129","The Wolf Of Wall Street","2013","100"
-"tt2334873","Blue Jasmine","2013","224","Blue Jasmine","2013","100"
-"tt0080487","Caddyshack","1980","272","Caddyshack","1980","100"
-"tt0101540","Cape Fear","1991","275","CAPE FEAR","1991","100"
-"tt0118842","Chasing Amy","1997","308","Chasing Amy","1997","100"
-"tt0124315","The Cider House Rules","1999","318","The Cider House Rules","1999","100"
-"tt0376541","Closer","2004","325","Closer","2004","100"
-"tt0118884","Contact","1997","333","Contact","1997","100"
-"tt1570728","Crazy, Stupid, Love.","2011","340","Crazy, Stupid, Love","2011","100"
-"tt0104036","The Crying Game","1992","345","The Crying Game","1992","100"
-"tt0118971","The Devil's Advocate","1997","388","The Devil���s Advocate","1997","100"
-"tt0301199","Dirty Pretty Things","2002","398","Dirty Pretty Things","2002","100"
-"tt0120655","Dogma","1999","408","Dogma","1999","100"
-"tt0069995","Don't Look Now","1973","411","Don't Look Now","1973","100"
-"tt0064276","Easy Rider","1969","424","Easy Rider","1969","100"
-"tt1174732","An Education","2009","427","An Education","2009","100"
-"tt0116209","The English Patient","1996","440","the English patient","1996","100"
-"tt1229822","Jane Eyre","2011","585","Jane EYRE","2011","100"
-"tt0375912","Layer Cake","2004","638","Layer Cake","2004","100"
-"tt0443272","Lincoln","2012","653","LINCOLN","2012","100"
-"tt0311113","Master and Commander: The Far Side of the World","2003","699","Master And Commander: The Far Side of the World","2003","100"
-"tt0084516","Poltergeist","1982","786","Poltergeist","1982","100"
-"tt0180073","Quills","2000","808","Quills","2000","100"
-"tt0093822","Raising Arizona","1987","817","Raising Arizona","1987","100"
-"tt0117500","The Rock","1996","851","The Rock","1996","100"
-"tt0111149","Shallow Grave","1994","919","Shallow Grave","1994","100"
-"tt0363547","Dawn of the Dead","2004","921","Shaun Of The Dead","2004","100"
-"tt0316654","Spider-Man 2","2004","951","Spider-Man 2","2004","100"
-"tt0078346","Superman","1978","992","Superman","1978","100"
-"tt0134119","The Talented Mr. Ripley","1999","999","The Talented Mr Ripley","1999","100"
-"tt0086425","Terms of Endearment","1983","1009","Terms Of Endearment","1983","100"
-"tt0103074","Thelma & Louise","1991","1015","Thelma and Louise","1991","100"
-"tt0086465","Trading Places","1983","1050","Trading Places","1983","100"
-"tt0094291","Wall Street","1987","1102","Wall Street","1987","100"
-"tt0185014","Wonder Boys","2000","1134","Wonder Boys","2000","100"
-"tt0120903","X-Men","2000","1141","X-Men","2000","100"
+"name@sourceA","name@sourceB","year@sourceA","year@sourceB","id@sourceA","id@sourceB","Confidence"
+"Superbad","Superbad","2007","2007","tt0829482","973",
+"Snatch.","Snatch","2000","2000","tt0208092","923",
+"Charade","Charade","1963","1963","tt0056923","310",
+"Dances with Wolves","Dances With Wolves","1990","1990","tt0099348","360",
+"(500) Days of Summer","(500) Days of Summer","2009","2009","tt1022603","1",
+"The Godfather: Part II","The Godfather Part 2","1974","1974","tt0071562","107",
+"The Remains of the Day","The Remains of the Day","1993","1993","tt0107943","819",
+"Brazil","Brazil","1985","1985","tt0088846","259",
+"L.A. Confidential","L.A. Confidential","1997","1997","tt0119488","617",
+"Love Actually","Love Actually","2003","2003","tt0314331","668",
+"Breakfast at Tiffany's","Breakfast At Tiffany's","1961","1961","tt0054698","260",
+"The Town","The Town","2010","2010","tt0840361","1029",
+"Repulsion","Repulsion","1965","1965","tt0059646","820",
+"Dangerous Liaisons","Dangerous Liaisons","1988","1988","tt0094947","361",
+"The Social Network","THE SOCIAL NETWORK","2010","2010","tt1285016","924",
+"Superman","Superman","1978","1978","tt0078346","974",
+"Big Fish","BIG FISH","2003","2003","tt0319061","209",
+"Ferris Bueller's Day Off","Ferris Bueller???s Day Off","1986","1986","tt0091042","463",
+"Indiana Jones and the Last Crusade","Indiana Jones and the Last Crusade","1989","1989","tt0097576","568",
+"Saving Private Ryan","SAVING PRIVATE RYAN","1998","1998","tt0120815","871",
+"Gladiator","Gladiator","2000","2000","tt0172495","517",
+"Planes, Trains & Automobiles","Planes, Trains & Automobiles","1987","1987","tt0093748","771",
+"The Big Lebowski","The Big Lebowski","1998","1998","tt0118715","210",
+"Ferris Bueller's Day Off","Ferris Bueller???s Day Off","1986","1986","tt0091042","261",
+"Requiem for a Dream","Requiem For a Dream","2000","2000","tt0180093","821",
+"Trading Places","Trading Places","1983","1983","tt0086465","1030",
+"Field of Dreams","Field of Dreams","1989","1989","tt0097351","464",
+"Indiana Jones and the Temple of Doom","Indiana Jones and the Temple Of Doom","1984","1984","tt0087469","569",
+"12 Years a Slave","12 Years a Slave","2013","2013","tt2024544","4",
+"The Notebook","THE Notebook","2004","2004","tt0332280","720",
+"Doctor Zhivago","Doctor Zhivago","1965","1965","tt0059113","413",
+"Planet of the Apes","Planet of the Apes","1968","1968","tt0063442","772",
+"The Big Sleep","The Big Sleep","1946","1946","tt0038355","211",
+"Reservoir Dogs","Reservoir Dogs","1992","1992","tt0105236","822",
+"Inglourious Basterds","Inglourious Basterds","2009","2009","tt0361748","570",
+"Traffic","Traffic","2000","2000","tt0181865","1031",
+"Fight Club","Fight Club","1999","1999","tt0137523","465",
+"127 Hours","127 Hours","2010","2010","tt1542344","5",
+"Notes on a Scandal","Notes on a Scandal","2006","2006","tt0465551","721",
+"M","M","1931","1931","tt0022100","670",
+"Glory","Glory","1989","1989","tt0097441","519",
+"Dog Day Afternoon","Dog Day Afternoon","1975","1975","tt0072890","414",
+"Suspiria","Suspiria","1977","1977","tt0076786","977",
+"Star Wars: Episode VI - Return of the Jedi","Star Wars Episode VI: Return Of The Jedi","1983","1983","tt0086190","823",
+"Training Day","Training Day","2001","2001","tt0139654","1032",
+"The Dark Knight","The Dark Knight","2008","2008","tt0468569","364",
+"Dogma","Dogma","1999","1999","tt0120655","415",
+"The Fighter","The Fighter","2010","2010","tt0964517","466",
+"Scarface","Scarface","1983","1983","tt0086250","874",
+"The Player","The Player","1992","1992","tt0105151","774",
+"The Godfather","the godfather","1972","1972","tt0068646","522",
+"Trainspotting","Trainspotting","1996","1996","tt0117951","1033",
+"The Dark Knight Rises","The Dark Knight Rises","2012","2012","tt1345836","365",
+"Barry Lyndon","Barry Lyndon","1975","1975","tt0072684","163",
+"Donnie Brasco","Donnie Brasco","1997","1997","tt0119008","416",
+"21 Grams","21 Grams","2003","2003","tt0315733","7",
+"Inside Llewyn Davis","Inside Llewyn Davis","2013","2013","tt2042568","572",
+"Annie Hall","Annie Hall","1977","1977","tt0075686","113",
+"Pleasantville","Pleasantville","1998","1998","tt0120789","775",
+"The Sound of Music","The Sound of Music","1965","1965","tt0059742","929",
+"Donnie Darko","Donnie Darko","2001","2001","tt0246578","417",
+"Barton Fink","Barton Fink","1991","1991","tt0101410","164",
+"The Godfather: Part II","The Godfather Part 2","1974","1974","tt0071562","523",
+"The Lady Vanishes","The Lady Vanishes","1938","1938","tt0030341","623",
+"Finding Neverland","Finding Neverland","2004","2004","tt0308644","468",
+"Interview with the Vampire: The Vampire Chronicles","Interview with the Vampire: The Vampire Chronicles","1994","1994","tt0110148","573",
+"Billy Elliot","BILLY ELLIOT","2000","2000","tt0249462","215",
+"Source Code","Source Code","2011","2011","tt0945513","930",
+"Chasing Amy","Chasing Amy","1997","1997","tt0118842","317",
+"Don't Look Now","Don't Look Now","1973","1973","tt0069995","418",
+"The Godfather: Part III","The Godfather Part 3","1990","1990","tt0099674","524",
+"Scent of a Woman","Scent of a woman","1992","1992","tt0105323","877",
+"28 Days Later...","28 Days later","2002","2002","tt0289043","9",
+"The Bridge on the River Kwai","The Bridge On The River Kwai","1957","1957","tt0050212","266",
+"Poltergeist","Poltergeist","1982","1982","tt0084516","777",
+"What's Eating Gilbert Grape","What???s eating gilbert grape","1993","1993","tt0108550","1091",
+"Spartacus","Spartacus","1960","1960","tt0054331","931",
+"Rise of the Planet of the Apes","Rise Of The Planet Of The Apes","2011","2011","tt1318514","827",
+"Taxi Driver","Taxi Driver","1976","1976","tt0075314","982",
+"O Brother, Where Art Thou?","O Brother, Where Art thou?","2000","2000","tt0190590","726",
+"A Fish Called Wanda","A FISH CALLED WANDA","1988","1988","tt0095159","470",
+"Schindler's List","Schindler???s List","1993","1993","tt0108052","878",
+"The Bridges of Madison County","The Bridges of Madison County","1995","1995","tt0112579","267",
+"Alien","Alien","1979","1979","tt0078748","66",
+"Mad Max 2: The Road Warrior","Mad Max 2: The road warrior","1981","1981","tt0082694","676",
+"Batman","Batman","1989","1989","tt0096895","167",
+"Dawn of the Dead","Dawn of the  Dead","1978","1978","tt0077402","369",
+"The Fisher King","The Fisher King","1991","1991","tt0101889","471",
+"Double Indemnity","Double Indemnity","1944","1944","tt0036775","420",
+"Goldfinger","Goldfinger","1964","1964","tt0058150","526",
+"Iron Man","Iron Man","2008","2008","tt0371746","576",
+"Aliens","AlienS","1986","1986","tt0090605","67",
+"When Harry Met Sally...","When Harry Met Sally...","1989","1989","tt0098635","1093",
+"The Prestige","The Prestige","2006","2006","tt0482571","779",
+"Ocean's Eleven","Ocean's Eleven","2001","2001","tt0240772","728",
+"Gone Baby Gone","Gone baby gone","2007","2007","tt0452623","527",
+"Batman Begins","Batman Begins","2005","2005","tt0372784","169",
+"Apocalypse Now","Apocalypse Now","1979","1979","tt0078788","118",
+"Chinatown","Chinatown","1974","1974","tt0071315","321",
+"The Birds","The Birds","1963","1963","tt0056869","220",
+"All About Eve","All About Eve","1950","1950","tt0042192","69",
+"The Terminator","The Terminator","1984","1984","tt0088247","987",
+"Apollo 13","APOLLO 13","1995","1995","tt0112384","119",
+"True Romance","True Romance","1993","1993","tt0108399","1041",
+"The Last Emperor","The Last Emperor","1987","1987","tt0093389","629",
+"Pride & Prejudice","Pride and Prejudice","2005","2005","tt0414387","782",
+"Terminator 2: Judgment Day","Terminator 2: Judgment Day","1991","1991","tt0103064","988",
+"A Christmas Story","A Christmas Story","1983","1983","tt0085334","323",
+"Spider-Man 2","Spider-Man 2","2004","2004","tt0316654","936",
+"Who Framed Roger Rabbit","Who Framed Roger Rabbit","1988","1988","tt0096438","1096",
+"The Last of the Mohicans","The Last Of The Mohicans","1992","1992","tt0104691","630",
+"The Truman Show","The Truman Show","1998","1998","tt0120382","1042",
+"Malcolm X","Malcolm X","1992","1992","tt0104797","680",
+"Black Hawk Down","Black Hawk Down","2001","2001","tt0265086","222",
+"It's a Wonderful Life","IT???S A WONDERFUL LIFE","1946","1946","tt0038650","581",
+"Road to Perdition","Road To Perdition","2002","2002","tt0257044","833",
+"Gone with the Wind","Gone With the Wind","1939","1939","tt0031381","531",
+"All Quiet on the Western Front","All Quiet on the Western Front","1930","1930","tt0020629","71",
+"The Princess Bride","THE PRINCESS BRIDE","1987","1987","tt0093779","784",
+"The Last Samurai","The Last Samurai","2003","2003","tt0325710","632",
+"Terms of Endearment","Terms Of Endearment","1983","1983","tt0086425","990",
+"Dazed and Confused","Dazed and Confused","1993","1993","tt0106677","376",
+"Good Will Hunting","Good Will Hunting","1997","1997","tt0119217","532",
+"The Omen","The Omen","1976","1976","tt0075005","733",
+"The Wicker Man","The Wicker Man","1973","1973","tt0070917","1099",
+"Bullitt","Bullitt","1968","1968","tt0062765","275",
+"E.T. the Extra-Terrestrial","E.T. ??? The Extraterrestrial","1982","1982","tt0083866","427",
+"Goodfellas","Goodfellas","1990","1990","tt0099685","533",
+"The Cider House Rules","The Cider House Rules","1999","1999","tt0124315","327",
+"The Artist","The Artist","2011","2011","tt1655442","124",
+"The Last Temptation of Christ","The last temptation Of Christ","1988","1988","tt0095497","634",
+"The Texas Chain Saw Massacre","The Texas Chain Saw Massacre","1974","1974","tt0072271","992",
+"The Searchers","The Searchers","1956","1956","tt0049730","888",
+"The Goonies","The Goonies","1985","1985","tt0089218","534",
+"Jackie Brown","jackie brown","1997","1997","tt0119396","584",
+"All the President's Men","All the President's Men","1976","1976","tt0074119","74",
+"As Good as It Gets","As Good As It Gets","1997","1997","tt0119822","125",
+"Cinema Paradiso","Cinema Paradiso","1988","1988","tt0095765","328",
+"Blade Runner","blade runner","1982","1982","tt0083658","226",
+"About Time","About Time","2013","2013","tt2194499","21",
+"On the Waterfront","On The Waterfront","1954","1954","tt0047296","736",
+"The Graduate","The Graduate","1967","1967","tt0061722","535",
+"Almost Famous","Almost Famous","2000","2000","tt0181875","75",
+"The Man Who Knew Too Much","The Man Who Knew Too Much","1956","1956","tt0049470","686",
+"Lawrence of Arabia","Lawrence of Arabia","1962","1962","tt0056172","636",
+"RoboCop","Robocop","1987","1987","tt0093870","838",
+"Dead Poets Society","Dead Poets Society","1989","1989","tt0097165","380",
+"Cabaret","Cabaret","1972","1972","tt0068327","278",
+"Eastern Promises","Eastern promises","2007","2007","tt0765443","430",
+"Sense and Sensibility","Sense And Sensibility","1995","1995","tt0114388","891",
+"Gran Torino","Gran Torino","2008","2008","tt1205489","536",
+"Jane Eyre","Jane EYRE","2011","2011","tt1229822","586",
+"Layer Cake","Layer Cake","2004","2004","tt0375912","637",
+"Psycho","Psycho","1960","1960","tt0054215","789",
+"Blazing Saddles","BLAZING SADDLES","1974","1974","tt0071230","228",
+"Clerks.","Clerks","1994","1994","tt0109445","330",
+"The Rock","The Rock","1996","1996","tt0117500","839",
+"Easy Rider","Easy Rider","1969","1969","tt0064276","431",
+"Forrest Gump","Forrest Gump","1994","1994","tt0109830","483",
+"The Grand Budapest Hotel","The Grand Budapest Hotel","2014","2014","tt2278388","537",
+"Jaws","Jaws","1975","1975","tt0073195","587",
+"Rocky","Rocky","1976","1976","tt0075148","840",
+"The French Connection","The French Connection","1971","1971","tt0067116","486",
+"Thelma & Louise","Thelma and Louise","1991","1991","tt0103074","996",
+"Ed Wood","Ed Wood","1994","1994","tt0109707","432",
+"Amadeus","Amadeus","1984","1984","tt0086879","79",
+"Manhattan","Manhattan","1979","1979","tt0079522","689",
+"Stand by Me","Stand By Me","1986","1986","tt0092005","945",
+"Caddyshack","Caddyshack","1980","1980","tt0080487","281",
+"A Clockwork Orange","A Clockwork Orange","1971","1971","tt0066921","332",
+"A Beautiful Mind","A Beautiful Mind","2001","2001","tt0268978","180",
+"The Grapes of Wrath","The Grapes Of Wrath","1940","1940","tt0032551","539",
+"Serpico","Serpico","1973","1973","tt0070666","894",
+"Close Encounters of the Third Kind","Close Encounters of the Third Kind","1977","1977","tt0075860","333",
+"The Abyss","The Abyss","1989","1989","tt0096754","26",
+"Pulp Fiction","Pulp Fiction","1994","1994","tt0110912","792",
+"An Education","An Education","2009","2009","tt1174732","434",
+"Atonement","Atonement","2007","2007","tt0783233","130",
+"Roman Holiday","Roman Holiday","1953","1953","tt0046250","843",
+"The Wolf of Wall Street","The Wolf Of Wall Street","2013","2013","tt0993846","1107",
+"Closer","Closer","2004","2004","tt0376541","334",
+"Edward Scissorhands","EdWARD SCISSORHANDS","1990","1990","tt0099487","435",
+"Jurassic Park","Jurassic Park","1993","1993","tt0107290","591",
+"The Third Man","The Third Man","1949","1949","tt0041959","999",
+"Se7en","seven","1995","1995","tt0114369","896",
+"Cape Fear","CAPE FEAR","1991","1991","tt0101540","284",
+"The Untouchables","The Untouchables","1987","1987","tt0094226","1058",
+"Blood Simple.","Blood Simple","1984","1984","tt0086979","233",
+"Marathon Man","Marathon Man","1976","1976","tt0074860","692",
+"This Is Spinal Tap","This Is Spinal Tap","1984","1984","tt0088258","1003",
+"L??on: The Professional","Leon ??? The Professional","1994","1994","tt0110413","643",
+"Beetlejuice","Beetlejuice","1988","1988","tt0094721","184",
+"Lethal Weapon","Lethal Weapon","1987","1987","tt0093409","644",
+"Collateral","Collateral","2004","2004","tt0369339","337",
+"The Usual Suspects","The Usual Suspects","1995","1995","tt0114814","1060",
+"Captain America: The Winter Soldier","Captain America: The Winter soldier","2014","2014","tt1843866","286",
+"The Deer Hunter","The Deer Hunter","1978","1978","tt0077416","388",
+"The Green Mile","The Green Mile","1999","1999","tt0120689","544",
+"Before Sunrise","Before Sunrise","1995","1995","tt0112471","185",
+"The Elephant Man","The Elephant Man","1980","1980","tt0080678","439",
+"Blow-Up","Blowup","1966","1966","tt0060176","235",
+"Master and Commander: The Far Side of the World","Master And Commander: The Far Side of the World","2003","2003","tt0311113","695",
+"Quills","Quills","2000","2000","tt0180073","797",
+"Rosemary's Baby","Rosemary's Baby","1968","1968","tt0063522","847",
+"V for Vendetta","V For Vendetta","2005","2005","tt0434409","1061",
+"From Russia with Love","From Russia With Love","1963","1963","tt0057076","493",
+"Carlito's Way","CARLITO???S WAY","1993","1993","tt0106519","287",
+"Deliverance","Deliverance","1972","1972","tt0068473","389",
+"Before Sunset","Before Sunset","2004","2004","tt0381681","186",
+"Shadow of a Doubt","Shadow Of A Doubt","1943","1943","tt0036342","900",
+"Blue Jasmine","Blue Jasmine","2013","2013","tt2334873","236",
+"Match Point","Match Point","2005","2005","tt0416320","696",
+"Wonder Boys","Wonder Boys","2000","2000","tt0185014","1112",
+"The Royal Tenenbaums","The Royal Tenenbaums","2001","2001","tt0265666","848",
+"The Departed","The Departed","2006","2006","tt0407887","391",
+"The Matrix","The Matrix","1999","1999","tt0133093","697",
+"Paris, Texas","Paris, Texas","1984","1984","tt0087884","748",
+"American Beauty","American Beauty","1999","1999","tt0169547","87",
+"Blue Velvet","Blue Velvet","1986","1986","tt0090756","238",
+"The Aviator","The Aviator","2004","2004","tt0338751","138",
+"Star Trek","Star Trek","2009","2009","tt0796366","954",
+"Kick-Ass","Kick-Ass","2010","2010","tt1250777","598",
+"Raging Bull","Raging Bull","1980","1980","tt0081398","800",
+"Contact","Contact","1997","1997","tt0118884","341",
+"Being There","Being There","1979","1979","tt0078841","189",
+"The Blues Brothers","The Blues Brothers","1980","1980","tt0080455","239",
+"Empire of the Sun","Empire of the Sun","1987","1987","tt0092965","443",
+"Star Trek Into Darkness","Star Trek INTO DARKNESS","2013","2013","tt1408101","955",
+"Kill Bill: Vol. 1","Kill Bill: Vol. 1","2003","2003","tt0266697","599",
+"Raiders of the Lost Ark","Raiders Of The Lost Ark","1981","1981","tt0082971","801",
+"Star Wars: Episode V - The Empire Strikes Back","Star Wars Episode V: The Empire Strikes Back","1980","1980","tt0080684","444",
+"Shallow Grave","Shallow Grave","1994","1994","tt0111149","904",
+"Groundhog Day","GROUNDHOG DAY","1993","1993","tt0107048","549",
+"American Graffiti","American Graffiti","1973","1973","tt0069704","89",
+"Rushmore","Rushmore","1998","1998","tt0128445","852",
+"American History X","American History X","1998","1998","tt0120586","90",
+"Lincoln","LINCOLN","2012","2012","tt0443272","650",
+"The Game","The Game","1997","1997","tt0119174","498",
+"Kill Bill: Vol. 2","Kill Bill: Vol. 2","2004","2004","tt0378194","600",
+"Awakenings","Awakenings","1990","1990","tt0099077","140",
+"American Hustle","American Hustle","2013","2013","tt1800241","91",
+"Gandhi","Gandhi","1982","1982","tt0083987","499",
+"The English Patient","the English patient","1996","1996","tt0116209","446",
+"Dawn of the Dead","Shaun Of The Dead","2004","2004","tt0363547","906",
+"Shaun of the Dead","Shaun Of The Dead","2004","2004","tt0365748","906",
+"Star Wars: Episode III - Revenge of the Sith","Star Wars Episode III: Revenge Of The Sith","2005","2005","tt0121766","958",
+"Paths of Glory","Paths of Glory","1957","1957","tt0050825","753",
+"Escape from Alcatraz","Escape From Alcatraz","1979","1979","tt0079116","447",
+"The Shawshank Redemption","The Shawshank Redemption","1994","1994","tt0111161","907",
+"The Devil's Advocate","The Devil???s Advocate","1997","1997","tt0118971","396",
+"X-Men","X-Men","2000","2000","tt0120903","1119",
+"Vertigo","Vertigo","1958","1958","tt0052357","1069",
+"The Name of the Rose","The Name of the rose","1986","1986","tt0091605","703",
+"Boogie Nights","Boogie Nights","1997","1997","tt0118749","244",
+"Raising Arizona","Raising Arizona","1987","1987","tt0093822","806",
+"American Psycho","American Psycho","2000","2000","tt0144084","94",
+"Sabrina","Sabrina","1954","1954","tt0047437","856",
+"Stardust","Stardust","2007","2007","tt0486655","960",
+"Garden State","Garden State","2004","2004","tt0333766","502",
+"Crash","CraSH","2004","2004","tt0375679","347",
+"Lock, Stock and Two Smoking Barrels","Lock, Stock and Two Smoking Barrels","1998","1998","tt0120735","654",
+"X2","X2","2003","2003","tt0290334","1120",
+"Sherlock Holmes","Sherlock Holmes","2009","2009","tt0988045","909",
+"Eternal Sunshine of the Spotless Mind","Eternal sunshine of the spotless mind","2004","2004","tt0338013","449",
+"American Splendor","American Splendor","2003","2003","tt0305206","95",
+"Ben-Hur","Ben Hur","1959","1959","tt0052618","196",
+"The Shining","The Shining","1980","1980","tt0081505","910",
+"Crazy, Stupid, Love.","Crazy, Stupid, Love","2011","2011","tt1570728","348",
+"The Adventures of Priscilla, Queen of the Desert","The Adventures of Priscilla, Queen of the Desert","1994","1994","tt0109045","41",
+"An American Werewolf in London","An American Werewolf in London","1981","1981","tt0082010","96",
+"Back to the Future","back to the future","1985","1985","tt0088763","146",
+"King Kong","king kong","1933","1933","tt0024216","606",
+"Back to the Future Part II","back to the future part ii","1989","1989","tt0096874","147",
+"X-Men: First Class","X-Men: First class","2011","2011","tt1270798","1123",
+"To Catch a Thief","To Catch A Thief","1955","1955","tt0048728","1018",
+"The Godfather: Part II","The Godfather Part 2","1974","1974","tt0071562","350",
+"The Exorcist","The Exorcist","1973","1973","tt0070047","452",
+"The Adventures of Robin Hood","the adventures of robin hood","1938","1938","tt0029843","43",
+"Die Hard","Die Hard","1988","1988","tt0095016","401",
+"The Bourne Identity","The Bourne Identity","2002","2002","tt0258463","249",
+"The Bourne Supremacy","The Bourne Supremacy","2004","2004","tt0372183","250",
+"Back to the Future Part II","Back to the Future Part III","1989","1989","tt0096874","148",
+"The Sting","The Sting","1973","1973","tt0070735","964",
+"To Kill a Mockingbird","To Kill A Mockingbird","1962","1962","tt0056592","1019",
+"The Perks of Being a Wallflower","The Perks Of Being A Wallflower","2012","2012","tt1659337","759",
+"Shutter Island","Shutter Island","2010","2010","tt1130884","913",
+"Crouching Tiger, Hidden Dragon","Crouching tiger, Hidden dragon","2000","2000","tt0190332","351",
+"Beverly Hills Cop","Beverly Hills Cop","1984","1984","tt0086960","199",
+"Die Hard: With a Vengeance","Die Hard with a Vengeance","1995","1995","tt0112864","402",
+"The Bourne Ultimatum","The Bourne Ultimatum","2007","2007","tt0440963","251",
+"Casablanca","Casablanca","1942","1942","tt0034583","301",
+"After Hours","After Hours","1985","1985","tt0088680","46",
+"Rear Window","Rear Window","1954","1954","tt0047396","812",
+"Catch Me If You Can","Catch Me If You Can","2002","2002","tt0264464","303",
+"Looper","Looper","2012","2012","tt1276104","660",
+"Sideways","Sideways","2004","2004","tt0375063","915",
+"The Crying Game","The Crying Game","1992","1992","tt0104036","353",
+"The Dirty Dozen","The Dirty Dozen","1967","1967","tt0061578","404",
+"Rebecca","Rebecca","1940","1940","tt0032976","813",
+"Straw Dogs","Straw Dogs","1971","1971","tt0067800","967",
+"The Lord of the Rings: The Fellowship of the Ring","Lord of the Rings: The Fellowship of the Ring","2001","2001","tt0120737","661",
+"The Silence of the Lambs","The Silence Of The Lambs","1991","1991","tt0102926","916",
+"Night of the Living Dead","Night of the Living Dead","1968","1968","tt0063350","712",
+"Philadelphia","Philadelphia","1993","1993","tt0107818","763",
+"Rebel Without a Cause","Rebel Without A Cause","1955","1955","tt0048545","814",
+"The Lord of the Rings: The Two Towers","Lord of the Rings: The Two Towers","2002","2002","tt0167261","662",
+"The Sixth Sense","The Sixth Sense","1999","1999","tt0167404","917",
+"Falling Down","Falling Down","1993","1993","tt0106856","457",
+"Dirty Pretty Things","Dirty Pretty Things","2002","2002","tt0301199","406",
+"Boys Don't Cry","Boys Don???t Cry","1999","1999","tt0171804","254",
+"The Lord of the Rings: The Return of the King","Lord of the Rings: The Return of the King","2003","2003","tt0167260","663",
+"Ghostbusters","Ghostbusters","1984","1984","tt0087332","512",
+"Sleepers","Sleepers","1996","1996","tt0117665","919",
+"A Nightmare on Elm Street","A Nightmare on Elm Street","1984","1984","tt0087800","714",
+"Indiana Jones and the Last Crusade","Indiana Jones and the Last Crusade","1989","1989","tt0097576","970",
+"Changeling","Changeling","2008","2008","tt0824747","307",
+"No Country for Old Men","No Country For Old Men","2007","2007","tt0477348","715",
+"Boyz n the Hood","Boyz n the hood","1991","1991","tt0101507","256",
+"In Bruges","In Bruges","2008","2008","tt0780536","564",
+"Wall Street","Wall Street","1987","1987","tt0094291","1081",
+"The Aviator","The Aviator","2004","2004","tt0338751","1026",
+"Lost Highway","Lost Highway","1997","1997","tt0116922","665",
+"Airplane!","airplane!","1980","1980","tt0080339","54",
+"Total Recall","Total Recall","1990","1990","tt0100802","1027",
+"Pirates of the Caribbean: The Curse of the Black Pearl","Pirates of the Caribbean: Curse of the Black Pearl","2003","2003","tt0325980","767",
+"Badlands","Badlands","1973","1973","tt0069762","157",
+"Chaplin","Chaplin","1992","1992","tt0103939","309",
+"Lost in Translation","Lost In Translation","2003","2003","tt0335266","666",
+"Sleuth","Sleuth","1972","1972","tt0069281","922",
+"North by Northwest","North By Northwest","1959","1959","tt0053125","717",
+"Braveheart","Braveheart","1995","1995","tt0112573","258",
+"Do the Right Thing","Do The Right Thing","1989","1989","tt0097216","410",
+"Inception","Inception","2010","2010","tt1375666","566",

@@ -16,7 +16,7 @@ if __name__ == '__main__':
     sourceA = open('imdb_data.json')
     imdb = json.load(sourceA)
     
-    sourceB = open('movie_location_detail.json')
+    sourceB = open('movie_location.json')
     movie_location = json.load(sourceB)
     
     with open('linkage_result.csv') as linkage:
@@ -29,7 +29,9 @@ if __name__ == '__main__':
             locations = []
             for location in movie_location[index_loc]["locations"]:
                 temp = {"movie_location": "",
-                        "actual_location": location}
+                        "actual_location": location["actual_location"],
+                        "source": location["source"],
+                        "geocoding": ""}
                 locations.append(temp)
             for location in imdb[index_imdb]["locations"]:
                 locations.append(location)
@@ -39,6 +41,8 @@ if __name__ == '__main__':
                      "genres": imdb[index_imdb]["genres"],
                      "rate": imdb[index_imdb]["rate"],
                      "desc": imdb[index_imdb]["desc"],
+                     "director": movie_location[index_loc]["director"],
+                     "cast": movie_location[index_loc]["cast"],
                      "location_images": movie_location[index_loc]["location_images"],
                      "locations": locations}
             #print movie

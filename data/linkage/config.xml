@@ -4,49 +4,87 @@
         <params>
             <param name="column-separator" value=","/>
             <param name="source-name" value="sourceA"/>
-            <param name="input-file" value="E:\filmspotting\data\linkage\imdb.csv#ENC=UTF-8#"/>
+            <param name="input-file" value="D:\用户目录\Documents\GitHub\filmspotting\data\linkage\imdb.csv#ENC=UTF-8#"/>
         </params>
         <row-model>
             <column column="id"
                 converter="cdc.datamodel.converters.DummyConverter" name="id">
                 <empty-values/>
-                <params/>
             </column>
             <column column="name"
                 converter="cdc.datamodel.converters.DummyConverter" name="name">
                 <empty-values/>
-                <params/>
             </column>
             <column column="year"
                 converter="cdc.datamodel.converters.DummyConverter" name="year">
                 <empty-values/>
-                <params/>
             </column>
         </row-model>
+        <preprocessing>
+            <deduplication>
+                <deduplication-condition acceptance-level="100">
+                    <condition
+                        class="cdc.impl.distance.EqualFieldsDistance"
+                        column="id" weight="33">
+                        <params/>
+                    </condition>
+                    <condition
+                        class="cdc.impl.distance.EqualFieldsDistance"
+                        column="name" weight="33">
+                        <params/>
+                    </condition>
+                    <condition
+                        class="cdc.impl.distance.EqualFieldsDistance"
+                        column="year" weight="34">
+                        <params/>
+                    </condition>
+                </deduplication-condition>
+                <hashing-function columns="id" hash="equality"/>
+            </deduplication>
+        </preprocessing>
     </left-data-source>
     <right-data-source class="cdc.impl.datasource.text.CSVDataSource" name="sourceB">
         <params>
             <param name="column-separator" value=","/>
             <param name="source-name" value="sourceB"/>
-            <param name="input-file" value="E:\filmspotting\data\linkage\movie_location.csv"/>
+            <param name="input-file" value="D:\用户目录\Documents\GitHub\filmspotting\data\linkage\movie_location.csv#ENC=UTF-8#"/>
         </params>
         <row-model>
             <column column="id"
                 converter="cdc.datamodel.converters.DummyConverter" name="id">
                 <empty-values/>
-                <params/>
             </column>
             <column column="name"
                 converter="cdc.datamodel.converters.DummyConverter" name="name">
                 <empty-values/>
-                <params/>
             </column>
             <column column="year"
                 converter="cdc.datamodel.converters.DummyConverter" name="year">
                 <empty-values/>
-                <params/>
             </column>
         </row-model>
+        <preprocessing>
+            <deduplication>
+                <deduplication-condition acceptance-level="100">
+                    <condition
+                        class="cdc.impl.distance.EqualFieldsDistance"
+                        column="id" weight="33">
+                        <params/>
+                    </condition>
+                    <condition
+                        class="cdc.impl.distance.EqualFieldsDistance"
+                        column="name" weight="33">
+                        <params/>
+                    </condition>
+                    <condition
+                        class="cdc.impl.distance.EqualFieldsDistance"
+                        column="year" weight="34">
+                        <params/>
+                    </condition>
+                </deduplication-condition>
+                <hashing-function columns="id" hash="equality"/>
+            </deduplication>
+        </preprocessing>
     </right-data-source>
     <join class="cdc.impl.join.nestedloop.NestedLoopJoin"
         summary-left="false" summary-right="false">
