@@ -259,7 +259,9 @@
     
     function clearMarkers() {
         for (var i = 0; i < markers.length; i++) {
-            markers[i].setMap(null);
+            if (markers[i] != undefined) {
+                markers[i].setMap(null);
+            }
         }
         markers = [];
     }
@@ -268,45 +270,33 @@
         for (var i = 0; i < locations.length; i ++) {
             var address = locations[i].actual_location;
             var geocodingURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + encodeURIComponent(address) + "&sensor=false";
-            (function(i, locationInfo) {
-                $.getJSON(geocodingURL,
-                      function(data) {
-                          if (data.status == "OK"
-                             && data.results.length > 0) {
-                              
-                              var location = data.results[0].geometry.location;
-                              
-                              var marker = new google.maps.Marker({
-                                  position: new google.maps.LatLng(location.lat, location.lng),
-                                  map: map,
-                                  title: location.actual_location,
-                                  animation: google.maps.Animation.DROP
-                              });
-                              markers[i] = marker;
-                              
-                              $(".location-entry").slice(i, i + 1).click(function() {
-                                  panTo(marker);
-                                  bounceMarker(marker);
-                                  // showStreetView(marker);
-                                  
-                              });
-                              
-                              google.maps.event.addListener(marker, "click", function() {
-                                  if (infoWindow) {
-                                      infoWindow.close();
-                                  }
-                                  infoWindow = new google.maps.InfoWindow({
-                                      maxWidth: 400,
-                                      content: Mustache.to_html($("#marker-window-tmpl").text(), locationInfo)
+            
+            (function(i, location) {
+                if (location.geocoding != null
+                    && location.geocoding.status == "OK"
+                    && location.geocoding.results.length > 0) {
+                    var laglng = location.geocoding.results[0].geometry.location;
+                    var marker = new google.maps.Marker({
+                                      position: new google.maps.LatLng(laglng.lat, laglng.lng),
+                                      map: map,
+                                      title: location.actual_location,
+                                      animation: google.maps.Animation.DROP
                                   });
-                                  infoWindow.open(map, marker);
-                                  
-                                  panTo(marker);
-                              });
-                          } else {
-                              console.log("geocoding failed for address: " + locationInfo.actual_location);
-                          }
-                      });
+                    markers[i] = marker;
+
+                    $(".location-entry").slice(i, i + 1).click(function() {
+                        panTo(marker);
+                        bounceMarker(marker);
+                        showInfoWindow(location, marker);
+                    });
+
+                    google.maps.event.addListener(marker, "click", function() {
+                        showInfoWindow(location, marker);
+                    });
+                
+                } else {
+                    console.log("geocoding failed for address: " + locations[i].actual_location);
+                }
             })(i, locations[i]);
         }
     }
@@ -321,6 +311,19 @@
         setTimeout(function () {
             marker.setAnimation(null);
         }, 1400);
+    }
+    
+    function showInfoWindow(locationInfo, marker) {
+        if (infoWindow) {
+            infoWindow.close();
+        }
+        infoWindow = new google.maps.InfoWindow({
+            maxWidth: 400,
+            content: Mustache.to_html($("#marker-window-tmpl").text(), locationInfo)
+        });
+        infoWindow.open(map, marker);
+
+        panTo(marker);
     }
 
 

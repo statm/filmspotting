@@ -151,10 +151,24 @@ body {
 }
 
 .location-entry div {
-    height: 50px;
+    height: 40px;
     margin-left: 10px;
-    margin-right: 30px;
+    padding-right: 40px;
     display: table;
+}
+
+.source-imdb {
+    background-image: url("../images/imdb-icon.png");
+    background-position: 348px 50%;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+
+.source-movie_location {
+    background-image: url("../images/ml-icon.png");
+    background-position: 348px 50%;
+    background-repeat: no-repeat;
+    background-size: 30px;
 }
 
 .location-entry p {
