@@ -1,1 +1,27 @@
-*.jpg
+# Extracted from https://github.com/ulrich/macaron-factory/blob/master/.gitignore
+# Ignore all dotfiles...
+.*
+# except for .gitignore
+!.gitignore
+
+# Ignore Play! working directory #
+db
+eclipse
+log
+logs
+modules
+lib
+precompiled
+project/project
+project/target
+target
+tmp
+test-result
+test
+server.pid
+*.iml
+*.eml
+conf/application.conf
+public/images/poster
+public/images/avatar
+app/Bootstrap.java

@@ -1,0 +1,186 @@
+html {
+	height: 100%
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0
+}
+
+#map-canvas {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	z-index: 10;
+	
+	-webkit-filter: blur(7px);
+	filter: blur(7px);
+}
+
+#overlay {
+	opacity: 0.6;
+	background: #FFF;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	z-index: 11;
+}
+
+/* search box & suggestion menu */
+
+#search-box {
+	position: fixed;
+	z-index: 12;
+    left: 200px;
+	right: 200px;
+}
+
+.search-input-with-suggestion {
+    -webkit-border-radius: 4px 4px 0 0 !important;
+    -moz-border-radius: 4px 4px 0 0 !important;
+    border-radius: 4px 4px 0 0 !important;
+}
+
+#search-suggestion {
+	max-height: 700px;
+    padding: 8px 0;
+    background-color: #FFF;
+    
+    border: 1px solid #CCC;
+    border-top: none;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+    
+    -webkit-box-shadow: 0 3px 3px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 3px 3px rgba(0,0,0,.2);
+    box-shadow: 0 3px 3px rgba(0,0,0,.2);
+    
+    list-style-type: none;
+    overflow-y: auto;
+    display: none;
+}
+
+#search-suggestion li {
+    height: 90px;
+    cursor: pointer;
+}
+
+.search-suggestion-active {
+    background-color: #0097CF;
+    color: #FFF;
+}
+
+.suggestion-item {
+    height: 90px;
+}
+
+.suggestion-inline-helper {
+    display: inline-block;
+    height: 100%;
+    width: 10px;
+    vertical-align: middle;
+}
+
+/* info box */
+
+#info-box {
+	background: #FFF;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	position: absolute;
+    overflow-y: hidden;
+    color: #555;
+}
+
+/* info box: header with movie intro */
+
+#movie-header {
+    height: 250px;
+    padding: 8px;
+}
+
+#movie-image {
+    width: 150px;
+    position: absolute;
+    border: 1px solid #DDD;
+}
+
+#movie-intro-box {
+    margin-left: 160px;
+    height: 100%;
+}
+
+#movie-name {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+#movie-year {
+    font-size: 16px;
+    color: #999;
+}
+
+#movie-intro-content {
+    margin-top: 12px;
+}
+
+/* info box: tab view */
+
+#location-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.location-entry {
+    cursor: pointer;
+    border-bottom: 1px solid #DDD;
+}
+
+.location-entry:hover {
+    background-color: #FAFAFA;
+}
+
+.location-entry div {
+    height: 40px;
+    margin-left: 10px;
+    padding-right: 40px;
+    display: table;
+}
+
+.source-imdb {
+    background-image: url("../images/imdb-icon.png");
+    background-position: 348px 50%;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+
+.source-movie_location {
+    background-image: url("../images/ml-icon.png");
+    background-position: 348px 50%;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+
+.location-entry p {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.info-pane {
+    position: absolute;
+    top: 292px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow:auto;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+	<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
+	<link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	
+	<script type="text/javascript" src="@{'/public/javascripts/jquery-1.11.0.min.js'}"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAopy9pygs2h40C94HY7elt7ftcIjrt__g&sensor=false"></script>
+	<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+	<script type="text/javascript" src="@{'/public/javascripts//main.js'}"></script>
+
+</head>
+<body>
+	<div id="map-canvas">
+		<div id="overlay"></div>
+	</div>
+
+	<div id="search-box">
+		<input id="search-input" type="text" class="form-control" placeholder="Search films or locations"/>
+		<ul id="search-suggestion"></ul>
+	</div>
+    
+    <div id="info-box"></div>
+    
+    <script id="suggestion-tmpl" type="text/html">
+        {{#data}}
+            <li>
+                <div class="suggestion-item">
+                    <span class="suggestion-inline-helper"/>
+                    <img src="/public/images/imdb/{{id}}.jpg" width="45"/>
+                    <span>{{name}}</span><span> ({{year}})</span>
+                </div>
+            </li>
+        {{/data}}
+    </script>
+    
+    <script id="info-box-tmpl" type="text/html">
+        <div id="movie-header">
+            <img src="/public/images/imdb/{{id}}.jpg" id="movie-image"/>
+            <div id="movie-intro-box">
+                <span id="movie-name">{{name}}</span>
+                <span id="movie-year">({{year}})</span><br/>
+                <div id="movie-intro-content">{{desc}}</div>
+            </div>
+        </div>
+        
+        <div>
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active"><a href="#movie-info-pane" data-toggle="tab">Movie Info</a></li>
+                <li><a href="#location-list-pane" data-toggle="tab">Locations</a></li>
+            </ul>
+            
+            <div class="tab-content">
+                <div id="movie-info-pane" class="tab-pane active info-pane">
+                    <p>IMDb Rate: <a href="http://www.imdb.com/title/{{id}}/ratings" target="_blank">{{rate}}</a></p>
+                    <p>Genres: {{genres}}</p>
+                </div>
+                
+                <div id="location-list-pane" class="tab-pane info-pane">
+                    <ul id="location-list">
+                    {{#locations}}
+                        <li class="location-entry source-{{source}}">
+                            <div>
+                                <p>{{actual_location}}</p>
+                            </div>
+                        </li>
+                    {{/locations}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </script>
+    
+    <script id="marker-window-tmpl" type="text/html">
+        <h6>{{actual_location}}</h6>
+        {{#movie_location}}
+        <h7>{{movie_location}}</h7>
+        {{/movie_location}}
+    </script>
+</body>
+</html>
