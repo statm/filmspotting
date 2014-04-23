@@ -64,15 +64,15 @@
             return;
         }
         
-        var suggestions = getSuggestion(inputText);
-        
-        if (suggestions.length > 0) {
-            suggestionData = {data: suggestions};
-            showSearchSuggestion();
-        } else {
-            suggestionData = {};
-            hideSearchSuggestion();
-        }
+        $.getJSON("/search/" + inputText, function(data) {
+        	if (data.movies.length > 0) {
+	        	suggestionData = data;
+	        	showSearchSuggestion();
+        	} else {
+        		suggestionData = {};
+        		hideSearchSuggestion();
+        	}
+        })
     }
 
 	var mapRevealed = false;
@@ -159,17 +159,29 @@
 	}
     
     function onSelectMovie() {
-        var movieData = suggestionData.data[selectedIndex]
-        
-        $("#search-input").val(movieData.name);
-        hideSearchSuggestion();
-        
-        showInfoBox(movieData);
-        
-        clearMarkers();
-        addMarkers(movieData.locations);
-        
-        $("#search-input").blur();
+//        var movieData = suggestionData.movies[selectedIndex];
+//        
+//        $("#search-input").val(movieData.title);
+//        hideSearchSuggestion();
+//        
+//        showInfoBox(movieData);
+//        
+//        clearMarkers();
+//        addMarkers(movieData.locations);
+//        
+//        $("#search-input").blur();
+    	
+    	var movieID = suggestionData.movies[selectedIndex].id;
+    	$("#search-input").val(suggestionData.movies[selectedIndex].title);
+    	hideSearchSuggestion();
+    	$("#search-input").blur();
+    	
+    	$.getJSON("/movie/" + movieID, function(data) {
+    		showInfoBox(data);
+    		
+    		clearMarkers();
+    		addMarkers(data.locations);
+    	});
     }
     
     var selectedIndex = 0;
@@ -268,18 +280,16 @@
     
     function addMarkers(locations) {
         for (var i = 0; i < locations.length; i ++) {
-            var address = locations[i].actual_location;
-            var geocodingURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + encodeURIComponent(address) + "&sensor=false";
+            var address = locations[i].actualLocation;
             
             (function(i, location) {
-                if (location.geocoding != null
-                    && location.geocoding.status == "OK"
-                    && location.geocoding.results.length > 0) {
-                    var laglng = location.geocoding.results[0].geometry.location;
+                if (location.latitude != null
+                	&& location.longitude != null) {
+                	
                     var marker = new google.maps.Marker({
-                                      position: new google.maps.LatLng(laglng.lat, laglng.lng),
+                                      position: new google.maps.LatLng(location.latitude, location.longitude),
                                       map: map,
-                                      title: location.actual_location,
+                                      title: location.actualLocation,
                                       animation: google.maps.Animation.DROP
                                   });
                     markers[i] = marker;
@@ -295,7 +305,7 @@
                     });
                 
                 } else {
-                    console.log("geocoding failed for address: " + locations[i].actual_location);
+                    console.log("geocoding failed for address: " + locations[i].actualLocation);
                 }
             })(i, locations[i]);
         }

@@ -27,24 +27,24 @@
     <div id="info-box"></div>
     
     <script id="suggestion-tmpl" type="text/html">
-        {{#data}}
+		{{#movies}}
             <li>
                 <div class="suggestion-item">
                     <span class="suggestion-inline-helper"/>
-                    <img src="/public/images/imdb/{{id}}.jpg" width="45"/>
-                    <span>{{name}}</span><span> ({{year}})</span>
+                    <img src="/public/images/imdb/{{imdbID}}.jpg" width="45"/>
+                    <span>{{title}}</span><span> ({{year}})</span>
                 </div>
             </li>
-        {{/data}}
+		{{/movies}}
     </script>
     
     <script id="info-box-tmpl" type="text/html">
         <div id="movie-header">
-            <img src="/public/images/imdb/{{id}}.jpg" id="movie-image"/>
+            <img src="/public/images/imdb/{{imdbID}}.jpg" id="movie-image"/>
             <div id="movie-intro-box">
-                <span id="movie-name">{{name}}</span>
+                <span id="movie-name">{{title}}</span>
                 <span id="movie-year">({{year}})</span><br/>
-                <div id="movie-intro-content">{{desc}}</div>
+                <div id="movie-intro-content">{{description}}</div>
             </div>
         </div>
         
@@ -65,7 +65,7 @@
                     {{#locations}}
                         <li class="location-entry source-{{source}}">
                             <div>
-                                <p>{{actual_location}}</p>
+                                <p>{{actualLocation}}</p>
                             </div>
                         </li>
                     {{/locations}}
@@ -76,10 +76,10 @@
     </script>
     
     <script id="marker-window-tmpl" type="text/html">
-        <h6>{{actual_location}}</h6>
-        {{#movie_location}}
-        <h7>{{movie_location}}</h7>
-        {{/movie_location}}
+        <h6>{{actualLocation}}</h6>
+        {{#movieLocation}}
+        <h7>{{movieLocation}}</h7>
+        {{/movieLocation}}
     </script>
 </body>
 </html>
