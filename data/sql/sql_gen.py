@@ -26,7 +26,7 @@ def clean(v):
         return ""
 
 if __name__ == '__main__':
-    f = open('../linkage/link.json')
+    f = open('../refine/3-geocoding_cleanup/geocoding_cleaned.json')
     data = json.load(f)
     f.close()
     
