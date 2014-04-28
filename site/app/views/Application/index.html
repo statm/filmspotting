@@ -36,9 +36,18 @@
                 </div>
             </li>
 		{{/movies}}
+		{{#locations}}
+			<li>
+                <div class="suggestion-item">
+                    <span class="suggestion-inline-helper"/>
+                    <img src="/public/images/loc-icon.png" width="45" height="45"/>
+                    <span>{{shortName}} ({{longName}})</span>
+                </div>
+            </li>
+		{{/locations}}
     </script>
     
-    <script id="info-box-tmpl" type="text/html">
+    <script id="info-box-movie-tmpl" type="text/html">
         <div id="movie-header">
             <img src="/public/images/imdb/{{imdbID}}.jpg" id="movie-image"/>
             <div id="movie-intro-box">
@@ -56,8 +65,49 @@
             
             <div class="tab-content">
                 <div id="movie-info-pane" class="tab-pane active info-pane">
-                    <p>IMDb Rate: <a href="http://www.imdb.com/title/{{id}}/ratings" target="_blank">{{rate}}</a></p>
-                    <p>Genres: {{genres}}</p>
+                    <div class="movie-info-line">
+						<div class="movie-info-header">
+							IMDb Rate: 
+						</div>
+
+						<div class="movie-info-list">
+							<a href="http://www.imdb.com/title/{{id}}/ratings" target="_blank">{{rate}}</a>
+						</div>
+					</div>
+
+                    <div class="movie-info-line">
+						<div class="movie-info-header">
+							Genres:
+						</div>
+
+						<div class="movie-info-list">
+							<div>{{genres}}</div>
+						</div>
+					</div>
+
+					<div class="movie-info-line">
+						<div class="movie-info-header">
+							Director:
+						</div>
+
+						<div class="movie-info-list">
+						{{#director}}
+							<div><a href="{{link}}" target="_blank">{{name}}</a></div>
+						{{/director}}
+						</div>
+					</div>
+
+					<div class="movie-info-line">
+						<div class="movie-info-header">
+							Cast:
+						</div>
+
+						<div class="movie-info-list">
+						{{#cast}}
+							<div><a href="{{link}}" target="_blank">{{name}}</a></div>
+						{{/cast}}
+						</div>
+					</div>
                 </div>
                 
                 <div id="location-list-pane" class="tab-pane info-pane">
@@ -74,6 +124,27 @@
             </div>
         </div>
     </script>
+    
+    <script id="info-box-location-tmpl" type="text/html">
+		<div id="location-header">
+            <img src="/public/images/loc-icon.png" id="location-icon"/>
+            <div id="location-intro-box">
+                <div id="location-short-name">{{location.shortName}}</div>
+                <div id="location-long-name">{{location.longName}}</div>
+				<div id="location-movie-count">with {{movieCount}} movie locations</div>
+            </div>
+        </div>
+
+		<ul id="location-movie-list">
+		{{#movies}}
+			<li class="location-movie-entry">
+				<span class="suggestion-inline-helper"/>
+				<img src="/public/images/imdb/{{imdbID}}.jpg" width="45"/>
+				<span>{{title}}</span><span> ({{year}})</span>
+			</li>
+		{{/movies}}
+		</ul>
+	</script>
     
     <script id="marker-window-tmpl" type="text/html">
         <h6>{{actualLocation}}</h6>

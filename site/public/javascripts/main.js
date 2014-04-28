@@ -1,10 +1,9 @@
-(function(document) {
+//(function(document) {
     "use strict";
     
 	$(document).ready(function() {
 		initMap();
 		initUI();
-        loadData();
 	});
     
     
@@ -52,7 +51,11 @@
             applySelectedIndex();
             event.preventDefault();
         } else if (event.keyCode == 13) { // enter
-            onSelectMovie();
+        	if (selectedIndex < suggestionData.movies.length) {
+            	selectMovie(suggestionData.movies[selectedIndex]);
+            } else {
+            	selectLocation(suggestionData.locations[selectedIndex - suggestionData.movies.length]);
+            }
         }
     }
     
@@ -65,7 +68,7 @@
         }
         
         $.getJSON("/search/" + inputText, function(data) {
-        	if (data.movies.length > 0) {
+        	if (data.movies.length > 0 || data.locations.length > 0) {
 	        	suggestionData = data;
 	        	showSearchSuggestion();
         	} else {
@@ -79,7 +82,7 @@
 
 	function revealMap() {
         mapRevealed = true;
-		var duration = 400;
+		var duration = 200;
 		$("#search-box").animate({top: 40}, {duration : duration, queue : false});
 		$("#overlay").animate({opacity: 0}, {duration : duration, queue : false}).hide();
 		$({blurRadius: 7}).animate({blurRadius: 0}, {
@@ -93,7 +96,7 @@
 	    });
 	}
 
-	function showInfoBox(movieData) {
+	function showInfoBoxWithMovieData(movieData) {
 		var duration = 200;
 		$("#map-canvas").animate({left: 400}, {duration : duration, queue : false});
 		$("#info-box").animate({width: 400}, {duration : duration, queue : false});
@@ -102,8 +105,35 @@
         var infoBox = $("#info-box");
         infoBox.empty();
         
-        var infoBoxTmpl = $("#info-box-tmpl").text();
+        movieData.genres = eval(movieData.genres);
+        if (movieData.genres != null) {
+        	movieData.genres = movieData.genres.join(" / ")
+        }
+        movieData.director = eval(movieData.director);
+        movieData.cast = eval(movieData.cast);
+        
+        var infoBoxTmpl = $("#info-box-movie-tmpl").text();
         infoBox.html(Mustache.to_html(infoBoxTmpl, movieData));
+	}
+	
+	function showInfoBoxWithLocationData(locationData, movies) {
+		var duration = 200;
+		$("#map-canvas").animate({left: 400}, {duration : duration, queue : false});
+		$("#info-box").animate({width: 400}, {duration : duration, queue : false});
+		$("#search-box").animate({"margin-left": 400, left: 70, right: 70}, {duration : duration, queue : false});
+		
+        var infoBox = $("#info-box");
+        infoBox.empty();
+        
+        var infoBoxTmpl = $("#info-box-location-tmpl").text();
+        infoBox.html(Mustache.to_html(infoBoxTmpl, {location: locationData, movies: movies, movieCount: movies.length}));
+        (function(movies) {
+	        $(".location-movie-entry").each(function(index) {
+	            $(this).click(function() {
+	                selectMovie(movies[index]);
+	            });
+	        });
+        })(movies);
 	}
 
 	function hideInfoBox() {
@@ -132,7 +162,11 @@
                     applySelectedIndex();
                 }
                 
-                onSelectMovie();
+                if (index < suggestionData.movies.length) {
+                	selectMovie(suggestionData.movies[selectedIndex]);
+                } else {
+                	selectLocation(suggestionData.locations[selectedIndex - suggestionData.movies.length]);
+                }
             });
             $(this).mousemove(function(event) {
                 if (event.pageX == lastMouseX
@@ -158,29 +192,30 @@
 		$("#search-suggestion").hide();
 	}
     
-    function onSelectMovie() {
-//        var movieData = suggestionData.movies[selectedIndex];
-//        
-//        $("#search-input").val(movieData.title);
-//        hideSearchSuggestion();
-//        
-//        showInfoBox(movieData);
-//        
-//        clearMarkers();
-//        addMarkers(movieData.locations);
-//        
-//        $("#search-input").blur();
-    	
-    	var movieID = suggestionData.movies[selectedIndex].id;
-    	$("#search-input").val(suggestionData.movies[selectedIndex].title);
+    function selectMovie(movie) {
+    	var movieID = movie.id;
+    	$("#search-input").val(movie.title);
     	hideSearchSuggestion();
     	$("#search-input").blur();
     	
     	$.getJSON("/movie/" + movieID, function(data) {
-    		showInfoBox(data);
+    		showInfoBoxWithMovieData(data);
     		
     		clearMarkers();
     		addMarkers(data.locations);
+    	});
+    }
+    
+    function selectLocation(location) {
+    	var locationID = location.id;
+    	
+    	$("#search-input").val(location.shortName);
+    	hideSearchSuggestion();
+    	$("#search-input").blur();
+    	
+    	$.getJSON("/location/" + locationID, function(data) {
+    		showInfoBoxWithLocationData(location, data);
+    		clearMarkers();
     	});
     }
     
@@ -223,19 +258,6 @@
     // ======================================
     //  Data
     // ======================================
-    
-    var data;
-
-    function loadData() {
-        $.ajax({
-            type: "GET",
-            url: "/public/data/link.json",
-            success: function(result) {
-                data = result;
-            },
-            async: false
-        });
-    }
     
     function getSuggestion(input) {
         var result = [];
@@ -347,4 +369,4 @@
         panorama.setVisible(true);
     }
     
-})(document);
+//})(document);

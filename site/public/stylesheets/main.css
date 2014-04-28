@@ -136,6 +136,25 @@ body {
 
 /* info box: tab view */
 
+.movie-info-line {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	min-height: 40px;
+	border-bottom: 1px solid #DDD;
+}
+
+.movie-info-line:hover {
+	background-color: #FAFAFA;
+}
+
+.movie-info-header {
+	float: left;
+}
+
+.movie-info-list {
+	margin-left: 80px;
+}
+
 #location-list {
     list-style: none;
     padding-left: 0;
@@ -183,4 +202,54 @@ body {
     right: 0;
     left: 0;
     overflow:auto;
+}
+
+/* info box: header with location intro */
+#location-header {
+    height: 115px;
+    padding: 15px;
+}
+
+#location-icon {
+    width: 80px;
+    position: absolute;
+}
+
+#location-intro-box {
+    margin-left: 100px;
+    height: 100%;
+}
+
+#location-short-name {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+#location-long-name {
+    font-size: 16px;
+    color: #999;
+}
+
+#location-movie-list {
+	overflow-y: auto;
+	position: absolute;
+	bottom: 0;
+	top: 115px;
+	left: 0;
+	right: 0;
+	margin-bottom: 0;
+	list-style: none;
+	padding-left: 0;
+	border-top: 1px solid #CCC;
+}
+
+.location-movie-entry {
+	height: 90px;
+	cursor: pointer;
+}
+
+.location-movie-entry:hover {
+	background-color: #0097CF;
+    color: #FFF;
 }

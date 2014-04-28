@@ -5,21 +5,15 @@ if __name__ == '__main__':
     data = json.load(f)
     f.close()
     
-    print "movie count: " + str(len(data))
-    
-    status_table = {}
-    
-    l = 0
+    loc_parts = []
     
     for entry in data:
         for location in entry["locations"]:
-            l += 1
             gc = location["geocoding"]
-            if not gc["status"] in status_table.keys():
-                status_table[gc["status"]] = 1
-            else:
-                status_table[gc["status"]] += 1
+            if gc["status"] == "OK":
+                for addr_comp in gc["results"][0]["address_components"]:
+                    if addr_comp["long_name"] not in loc_parts:
+                        loc_parts.append(addr_comp["long_name"])
+                        
+    print len(loc_parts)
                 
-                
-    print "location count: " + str(l)
-    print status_table
