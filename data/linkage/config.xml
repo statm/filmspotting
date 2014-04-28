@@ -10,14 +10,17 @@
             <column column="id"
                 converter="cdc.datamodel.converters.DummyConverter" name="id">
                 <empty-values/>
+                <params/>
             </column>
             <column column="name"
                 converter="cdc.datamodel.converters.DummyConverter" name="name">
                 <empty-values/>
+                <params/>
             </column>
             <column column="year"
                 converter="cdc.datamodel.converters.DummyConverter" name="year">
                 <empty-values/>
+                <params/>
             </column>
         </row-model>
         <preprocessing>
@@ -47,20 +50,18 @@
         <params>
             <param name="column-separator" value=","/>
             <param name="source-name" value="sourceB"/>
-            <param name="input-file" value="D:\用户目录\Documents\GitHub\filmspotting\data\linkage\movie_location.csv#ENC=UTF-8#"/>
+            <param name="input-file" value="D:\用户目录\Documents\GitHub\filmspotting\data\linkage\filmaps.csv#ENC=UTF-8#"/>
         </params>
         <row-model>
             <column column="id"
                 converter="cdc.datamodel.converters.DummyConverter" name="id">
                 <empty-values/>
+                <params/>
             </column>
             <column column="name"
                 converter="cdc.datamodel.converters.DummyConverter" name="name">
                 <empty-values/>
-            </column>
-            <column column="year"
-                converter="cdc.datamodel.converters.DummyConverter" name="year">
-                <empty-values/>
+                <params/>
             </column>
         </row-model>
         <preprocessing>
@@ -76,11 +77,6 @@
                         column="name" weight="33">
                         <params/>
                     </condition>
-                    <condition
-                        class="cdc.impl.distance.EqualFieldsDistance"
-                        column="year" weight="34">
-                        <params/>
-                    </condition>
                 </deduplication-condition>
                 <hashing-function columns="id" hash="equality"/>
             </deduplication>
@@ -93,16 +89,12 @@
             <params>
                 <param name="acceptance-level" value="100"/>
             </params>
-            <condition class="cdc.impl.distance.EditDistance"
-                left-column="name" right-column="name" weight="80">
+            <condition class="cdc.impl.distance.JaroWinkler"
+                left-column="name" right-column="name" weight="100">
                 <params>
-                    <param name="match-level-start" value="0.3"/>
-                    <param name="math-level-end" value="0.5"/>
+                    <param name="pref-weight" value="0.1"/>
+                    <param name="pref-length" value="6"/>
                 </params>
-            </condition>
-            <condition class="cdc.impl.distance.EqualFieldsDistance"
-                left-column="year" right-column="year" weight="20">
-                <params/>
             </condition>
         </join-condition>
         <row-model>
@@ -111,7 +103,6 @@
             <column name="year" source="sourceA"/>
             <column name="id" source="sourceB"/>
             <column name="name" source="sourceB"/>
-            <column name="year" source="sourceB"/>
         </row-model>
     </join>
     <results-savers>

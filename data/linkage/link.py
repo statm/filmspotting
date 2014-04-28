@@ -22,13 +22,12 @@ if __name__ == '__main__':
     imdb_linked_index = []
     movie_location_linked_index = []
     
-    with open('linkage_result.csv') as linkage:
+    with open('linkage_result_ml_imdb.csv') as linkage:
         reader = csv.DictReader(linkage, delimiter=',')
         for line in reader:
             index_loc = find_index("id", line["id@sourceB"], movie_location)
             index_imdb = find_index("imdb_id", line["id@sourceA"], imdb)
-            #print index_loc
-            #print index_imdb
+            print line["id@sourceB"]
             imdb_linked_index.append(index_imdb)
             movie_location_linked_index.append(index_loc)
             locations = []
@@ -89,4 +88,4 @@ if __name__ == '__main__':
                     }
             data.append(movie)
     
-    dump('link.json')
+    dump('link_ml_imdb.json')
